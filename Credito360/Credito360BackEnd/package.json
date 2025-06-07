@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js",
+    "migrate": "sequelize-cli db:migrate --config src/config/config.js",
+    "seed": "sequelize-cli db:seed:all --config src/config/config.js"
   },
   "keywords": [],
   "author": "",
