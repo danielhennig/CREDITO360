@@ -4,13 +4,18 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const clienteRoutes = require('./routes/clienteRoutes');
-
+// Middlewares
 app.use(express.json());
 
-// Rotas
-app.use('/credito360', clienteRoutes);
+// Importação das rotas
+const clienteRoutes = require('./routes/clienteRoutes');
+const authRoutes = require('./routes/authRoutes');
 
+// Prefixo padrão: /credito360
+app.use('/credito360', clienteRoutes);
+app.use('/credito360', authRoutes);
+
+// Rota de teste
 app.get('/', (req, res) => {
     res.send('Crédito360 API rodando');
 });
