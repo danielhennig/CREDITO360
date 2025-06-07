@@ -1,13 +1,18 @@
-require('dotenv').config();
 const express = require('express');
+require('dotenv').config();
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+const clienteRoutes = require('./routes/clienteRoutes');
+
 app.use(express.json());
 
-// Teste de rota inicial
+// Rotas
+app.use('/credito360', clienteRoutes);
+
 app.get('/', (req, res) => {
-    res.send('Crédito360 API está rodando!');
+    res.send('Crédito360 API rodando');
 });
 
 app.listen(PORT, () => {
