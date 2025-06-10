@@ -1,34 +1,35 @@
 const axios = require('axios');
-const BASE_URL = 'http://localhost:3000/itau';
 
 async function login(numeroConta, senha) {
-    const { data } = await axios.post(`${BASE_URL}/login`, { numeroConta, senha });
+    const { data } = await axios.post('http://localhost:3000/itau/login', { numeroConta, senha });
     return data.token;
 }
 
-async function buscarExtrato(numeroConta, token) {
-    const { data } = await axios.get(`${BASE_URL}/transacoes/${numeroConta}`, {
-        headers: { Authorization: `Bearer ${token}` }
-    });
+async function gerarConsentimento(token) {
+    // Simula o consentimento do cliente
+    return { consentimento: true, data: new Date().toISOString() };
+}
+
+async function obterExtrato(token) {
+    const config = { headers: { Authorization: `Bearer ${token}` } };
+    const { data } = await axios.get('http://localhost:3000/itau/transacoes/0001', config);
     return data;
 }
 
-async function calcularScore(dadosExtrato) {
-    const lista = Array.isArray(dadosExtrato) ? dadosExtrato : dadosExtrato.transacoes || [];
-    const saldoTotal = lista.reduce((acc, t) => {
-        return t.tipo === 'deposito' ? acc + t.valor : acc - t.valor;
-    }, 0);
-
-
-    let score = 500;
-    if (saldoTotal > 2000) score += 100;
-    if (saldoTotal > 5000) score += 150;
-    return { saldoTotal, score };
+async function calcularScore(transacoes) {
+    const saldo = transacoes.reduce((total, t) => total + t.valor, 0);
+    return Math.round(saldo / 100); // Exemplo simples
 }
 
-async function buscarOfertas(score) {
-    const { data } = await axios.get(`${BASE_URL}/ofertas/recomendadas/${score}`);
+async function obterOfertas(score) {
+    const { data } = await axios.get(`http://localhost:3000/itau/ofertas/recomendadas/${score}`);
     return data;
 }
 
-module.exports = { login, buscarExtrato, calcularScore, buscarOfertas };
+module.exports = {
+    login,
+    gerarConsentimento,
+    obterExtrato,
+    calcularScore,
+    obterOfertas
+};
