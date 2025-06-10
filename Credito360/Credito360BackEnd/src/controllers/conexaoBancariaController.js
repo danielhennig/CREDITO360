@@ -1,27 +1,18 @@
-const itauService = require('../services/bancos/itauService');
+const itauService = require('../services/bancos/itauService'); // ✅ Necessário
 const sicrediService = require('../services/bancos/sicrediService');
 const mercadoPagoService = require('../services/bancos/mercadoPagoService');
 const banrisulService = require('../services/bancos/banrisulService');
 
 async function processarConexao(service, nomeBanco, req, res) {
-    const { numeroConta, senha } = req.body;
-    if (!numeroConta || !senha) {
-        return res.status(400).json({ erro: 'Informe numeroConta e senha.' });
-    }
+    const { numeroConta } = req.body;
+    if (!numeroConta) return res.status(400).json({ erro: 'Informe numeroConta.' });
 
     try {
-        const token = await service.login(numeroConta, senha);
-        const consentimento = await service.gerarConsentimento(token);
-        const extrato = await service.obterExtrato(token);
-        const score = await service.calcularScore(extrato);
+        const { transacoes, saldo, cliente } = await service.obterExtrato(numeroConta);
+        const score = await service.calcularScore(transacoes, saldo);
         const ofertas = await service.obterOfertas(score);
 
-        return res.json({
-            banco: nomeBanco,
-            consentimento,
-            score,
-            ofertas
-        });
+        return res.json({ banco: nomeBanco, cliente, score, ofertas });
     } catch (erro) {
         return res.status(500).json({ erro: `Erro ao conectar com ${nomeBanco}`, detalhes: erro.message });
     }

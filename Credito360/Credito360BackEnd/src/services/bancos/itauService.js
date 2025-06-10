@@ -1,27 +1,30 @@
 const axios = require('axios');
-
 const BASE_URL = 'http://localhost:3000/itau';
 
-async function login(numeroConta, senha) {
-    const { data } = await axios.post(`${BASE_URL}/login`, { numeroConta, senha });
-    return data.token;
-}
+async function obterExtrato(numeroConta) {
+    const { data } = await axios.get(`${BASE_URL}/open-finance/dados`, {
+        params: { numeroConta }
+    });
 
-async function gerarConsentimento(token) {
-    return { consentimento: true, data: new Date().toISOString() };
-}
+    if (!data || !data.transacoes || !Array.isArray(data.transacoes)) {
+        throw new Error('Resposta inválida da API do banco.');
+    }
 
-async function obterExtrato(token, numeroConta) {
-    const config = {
-        headers: { Authorization: `Bearer ${token}` }
+    return {
+        transacoes: data.transacoes,
+        saldo: data.conta?.saldo || 0,
+        cliente: {
+            nome: data.conta?.nome || 'Desconhecido',
+            email: data.conta?.email || null,
+            numeroConta: data.conta?.numeroConta || numeroConta
+        }
     };
-    const { data } = await axios.get(`${BASE_URL}/transacoes/${numeroConta}`, config);
-    return data;
 }
 
-async function calcularScore(transacoes) {
-    const saldo = transacoes.reduce((total, t) => total + t.valor, 0);
-    return Math.max(0, Math.round(saldo / 100));
+async function calcularScore(transacoes, saldo) {
+    const totalTransacoes = transacoes.reduce((total, t) => total + t.valor, 0);
+    const base = saldo + totalTransacoes;
+    return Math.max(0, Math.round(base / 100));
 }
 
 async function obterOfertas(score) {
@@ -30,8 +33,6 @@ async function obterOfertas(score) {
 }
 
 module.exports = {
-    login,
-    gerarConsentimento,
     obterExtrato,
     calcularScore,
     obterOfertas
