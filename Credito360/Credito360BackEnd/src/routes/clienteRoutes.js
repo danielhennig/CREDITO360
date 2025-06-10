@@ -7,6 +7,6 @@ const authMiddleware = require('../middlewares/authMiddleware');
 router.post('/clientes', clienteController.criarCliente);
 
 // Rota protegida para obter perfil completo do cliente (sem senha)
-router.get('/perfil', authMiddleware, clienteController.obterPerfil);
+router.get('/perfil',  clienteController.obterPerfil);
 
 module.exports = router;

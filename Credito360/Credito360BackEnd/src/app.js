@@ -11,12 +11,13 @@ app.use(express.json());
 const clienteRoutes = require('./routes/clienteRoutes');
 const authRoutes = require('./routes/authRoutes');
 const dadosBancariosRoutes = require('./routes/dadosBancariosRoutes');
-
+const conexaoBancariaRoutes = require('./routes/conexaoBancariaRoutes');
 
 // Prefixo padrão: /credito360
 app.use('/credito360', clienteRoutes);
 app.use('/credito360', authRoutes);
 app.use('/credito360', dadosBancariosRoutes);
+app.use('/credito360', conexaoBancariaRoutes);
 
 // Rota de teste
 app.get('/', (req, res) => {
