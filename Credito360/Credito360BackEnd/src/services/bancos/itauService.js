@@ -1,5 +1,5 @@
 const axios = require('axios');
-const BASE_URL = 'http://localhost:3000/itau';
+const BASE_URL = 'http://localhost:3001/itau';
 
 async function obterExtrato(numeroConta) {
     const { data } = await axios.get(`${BASE_URL}/open-finance/dados`, {
