@@ -38,5 +38,23 @@ module.exports = {
         } catch (error) {
             return res.status(500).json({ erro: 'Erro ao criar cliente', detalhe: error.message });
         }
+    },
+    async obterPerfil(req, res) {
+        try {
+            const clienteId = req.usuario.id;
+
+            const cliente = await Cliente.findByPk(clienteId, {
+                attributes: { exclude: ['senha'] } // oculta a senha
+            });
+
+            if (!cliente) {
+                return res.status(404).json({ erro: 'Cliente não encontrado' });
+            }
+
+            return res.status(200).json(cliente);
+        } catch (error) {
+            return res.status(500).json({ erro: 'Erro ao buscar perfil', detalhe: error.message });
+        }
     }
 };
+

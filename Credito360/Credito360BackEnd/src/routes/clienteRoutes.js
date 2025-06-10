@@ -2,12 +2,11 @@ const express = require('express');
 const router = express.Router();
 const clienteController = require('../controllers/clienteController');
 const authMiddleware = require('../middlewares/authMiddleware');
-// Rota de criação de cliente
+
+// Rota para criar cliente
 router.post('/clientes', clienteController.criarCliente);
-router.get('/perfil', authMiddleware, (req, res) => {
-    res.json({
-        mensagem: 'Rota protegida acessada com sucesso!',
-        usuario: req.usuario
-    });
-});
+
+// Rota protegida para obter perfil completo do cliente (sem senha)
+router.get('/perfil', authMiddleware, clienteController.obterPerfil);
+
 module.exports = router;
