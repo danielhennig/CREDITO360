@@ -5,7 +5,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-
 // Pages
 import AboutUs from "./pages/AboutUs";
 import Analysis from "./pages/Analysis";
@@ -59,7 +58,7 @@ const AppRoutes = () => {
       <Route path="/status" element={<Status />} />
       <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
       <Route path="/cadastro" element={<PublicRoute><Register /></PublicRoute>} />
-      
+
       <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}>
         <Route path="consentimento" element={<Consent />} />
         <Route path="coleta-dados" element={<DataCollection />} />
@@ -69,13 +68,13 @@ const AppRoutes = () => {
         <Route path="simulador" element={<Simulator />} />
         <Route path="conectar-bancos" element={<ConnectBanks />} />
         <Route path="minha-conta" element={<MyAccount />} />
-        
+
         {/* Partner Routes */}
         <Route path="parceiro/dashboard" element={<PartnerDashboard />} />
         <Route path="parceiro/criar-proposta" element={<CreateProposal />} />
         <Route path="parceiro/propostas" element={<MyProposals />} />
       </Route>
-      
+
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Eye, EyeOff, ArrowLeft } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import axios from 'axios';
 
 const Register = () => {
   const [userType, setUserType] = useState<'user' | 'partner'>('user');
@@ -25,7 +26,7 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  
+
   const { register } = useAuth();
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -65,7 +66,7 @@ const Register = () => {
 
     const documentLength = formData.document.replace(/\D/g, '').length;
     const expectedLength = documentType === 'PF' ? 11 : 14;
-    
+
     if (documentLength !== expectedLength) {
       toast({
         title: "Erro de validação",
@@ -80,39 +81,32 @@ const Register = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) return;
-    
+
     setIsLoading(true);
 
-    try {
-      const userData = {
-        name: documentType === 'PJ' ? formData.companyName : formData.name,
-        email: formData.email,
-        document: formData.document,
-        type: documentType,
-        userType,
-        ...(documentType === 'PJ' && {
-          companyName: formData.companyName,
-          fantasyName: formData.fantasyName
-        }),
-        password: formData.password
-      };
 
-      const success = await register(userData);
-      
-      if (success) {
-        toast({
-          title: "Conta criada com sucesso!",
-          description: "Você foi automaticamente logado",
-        });
-        navigate('/consentimento');
-      }
+
+    try {
+      await axios.post('http://localhost:3000/credito360/clientes', {
+        nome: formData.name,
+        cpf: formData.document.replace(/\D/g, ''),
+        email: formData.email,
+        senha: formData.password
+      });
+
+      toast({
+        title: "Cadastro realizado com sucesso!",
+        description: "Faça login para acessar sua conta."
+      });
+
+      navigate('/login');
     } catch (error) {
       toast({
-        title: "Erro no cadastro",
-        description: "Tente novamente em alguns instantes",
-        variant: "destructive",
+        title: "Erro ao cadastrar",
+        description: "Tente novamente em alguns instantes.",
+        variant: "destructive"
       });
     } finally {
       setIsLoading(false);
