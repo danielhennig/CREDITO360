@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const atualizarScoreController = require('../controllers/atualizarScoreController');
+const { atualizarScore } = require('../controllers/atualizarScoreController');
 
-router.get('/atualizar-score/:cpf', atualizarScoreController.atualizarScore);
+router.get('/atualizar-score/:cpf', atualizarScore);
 
 module.exports = router;

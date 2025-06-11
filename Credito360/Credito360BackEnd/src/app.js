@@ -21,7 +21,6 @@ app.use('/credito360', dadosBancariosRoutes);
 app.use('/credito360', conexaoBancariaRoutes);
 app.use('/credito360', scoreRoutes);
 
-
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
