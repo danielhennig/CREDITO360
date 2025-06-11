@@ -16,8 +16,10 @@ async function obterExtrato(numeroConta) {
         cliente: {
             nome: data.conta?.nome || 'Desconhecido',
             email: data.conta?.email || null,
-            numeroConta: data.conta?.numeroConta || numeroConta
+            numeroConta: data.conta?.numeroConta || numeroConta,
+            cpf: data.conta?.cpf || null
         }
+
     };
 }
 

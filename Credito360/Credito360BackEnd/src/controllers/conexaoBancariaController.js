@@ -1,14 +1,30 @@
-const itauService = require('../services/bancos/itauService'); // ✅ Necessário
+const itauService = require('../services/bancos/itauService');
 const sicrediService = require('../services/bancos/sicrediService');
 const mercadoPagoService = require('../services/bancos/mercadoPagoService');
 const banrisulService = require('../services/bancos/banrisulService');
+const conexoesCliente = require('../core/scoreCache');
 
 async function processarConexao(service, nomeBanco, req, res) {
-    const { numeroConta } = req.body;
-    if (!numeroConta) return res.status(400).json({ erro: 'Informe numeroConta.' });
+    const { numeroConta, senha } = req.body;
+
+    if (!numeroConta || !senha) {
+        return res.status(400).json({ erro: 'Informe numeroConta e senha.' });
+    }
 
     try {
-        const { transacoes, saldo, cliente } = await service.obterExtrato(numeroConta);
+        const { transacoes, saldo, cliente } = await service.obterExtrato(numeroConta, senha);
+        const cpf = cliente?.cpf;
+
+        if (!cpf) {
+            return res.status(400).json({ erro: 'CPF não encontrado nos dados da conta.' });
+        }
+
+        // Marca o banco como conectado para esse CPF
+        if (!conexoesCliente[cpf]) {
+            conexoesCliente[cpf] = { bancosConectados: {} };
+        }
+        conexoesCliente[cpf].bancosConectados[nomeBanco.toLowerCase()] = numeroConta;
+
         const score = await service.calcularScore(transacoes, saldo);
         const ofertas = await service.obterOfertas(score);
 

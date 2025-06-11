@@ -12,17 +12,15 @@ const clienteRoutes = require('./routes/clienteRoutes');
 const authRoutes = require('./routes/authRoutes');
 const dadosBancariosRoutes = require('./routes/dadosBancariosRoutes');
 const conexaoBancariaRoutes = require('./routes/conexaoBancariaRoutes');
+const scoreRoutes = require('./routes/scoreRoutes');
 
 // Prefixo padrão: /credito360
 app.use('/credito360', clienteRoutes);
 app.use('/credito360', authRoutes);
 app.use('/credito360', dadosBancariosRoutes);
 app.use('/credito360', conexaoBancariaRoutes);
+app.use('/credito360', scoreRoutes);
 
-// Rota de teste
-app.get('/', (req, res) => {
-    res.send('Crédito360 API rodando');
-});
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
