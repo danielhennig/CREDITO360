@@ -27,7 +27,6 @@ const Register = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const { register } = useAuth();
   const navigate = useNavigate();
   const { toast } = useToast();
 
