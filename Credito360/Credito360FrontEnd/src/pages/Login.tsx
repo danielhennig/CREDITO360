@@ -1,21 +1,20 @@
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Eye, EyeOff, ArrowLeft } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { useAuth } from '@/contexts/AuthContext';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  
-  const { login } = useAuth();
+
+ const { login } = useAuth();
   const navigate = useNavigate();
   const { toast } = useToast();
 
@@ -25,24 +24,25 @@ const Login = () => {
 
     try {
       const success = await login(email, password);
+
       if (success) {
         toast({
-          title: "Login realizado com sucesso!",
-          description: "Bem-vindo ao Crédito360",
+          title: 'Login realizado com sucesso!',
+          description: 'Bem-vindo ao Crédito360',
         });
         navigate('/dashboard');
       } else {
         toast({
-          title: "Erro no login",
-          description: "E-mail ou senha incorretos",
-          variant: "destructive",
+          title: 'Erro no login',
+          description: 'E-mail ou senha incorretos',
+          variant: 'destructive',
         });
       }
     } catch (error) {
       toast({
-        title: "Erro no login",
-        description: "Tente novamente em alguns instantes",
-        variant: "destructive",
+        title: 'Erro no sistema',
+        description: 'Servidor indisponível. Tente mais tarde.',
+        variant: 'destructive',
       });
     } finally {
       setIsLoading(false);
@@ -65,9 +65,7 @@ const Login = () => {
         <Card className="shadow-lg border-0">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Entrar na sua conta</CardTitle>
-            <CardDescription>
-              Digite suas credenciais para acessar o dashboard
-            </CardDescription>
+            <CardDescription>Digite suas credenciais para acessar o dashboard</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -81,6 +79,7 @@ const Login = () => {
                   placeholder="seu@email.com"
                   required
                   className="w-full"
+                  autoFocus
                 />
               </div>
 
@@ -115,21 +114,13 @@ const Login = () => {
               <Link to="#" className="text-sm text-blue-600 hover:text-blue-700">
                 Esqueci minha senha
               </Link>
-              
+
               <div className="text-sm text-gray-600">
                 Não tem uma conta?{' '}
                 <Link to="/cadastro" className="text-blue-600 hover:text-blue-700 font-medium">
                   Criar conta
                 </Link>
               </div>
-            </div>
-
-            <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-              <p className="text-sm text-blue-800 font-medium">Demo:</p>
-              <p className="text-xs text-blue-600 mt-1">
-                Usuário: joao@email.com / Senha: 123456<br />
-                Parceiro: empresa@email.com / Senha: 123456
-              </p>
             </div>
           </CardContent>
         </Card>

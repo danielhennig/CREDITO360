@@ -1,6 +1,6 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { User } from '@/types';
+import axios from 'axios';
 
 interface AuthContextType {
   user: User | null;
@@ -27,74 +27,42 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   });
 
   const login = async (email: string, password: string): Promise<boolean> => {
-    console.log('Tentativa de login:', { email, password });
-    
-    // Simulação de login - em produção seria uma chamada para API
-    const mockUsers: (User & { password: string })[] = [
-      {
-        id: '1',
-        name: 'João Silva',
-        email: 'joao@email.com',
-        document: '123.456.789-00',
-        type: 'PF',
-        userType: 'user',
-        password: '123456'
-      },
-      {
-        id: '2',
-        name: 'Empresa LTDA',
-        email: 'empresa@email.com',
-        document: '12.345.678/0001-90',
-        type: 'PJ',
-        userType: 'partner',
-        companyName: 'Empresa LTDA',
-        fantasyName: 'Empresa',
-        password: '123456'
-      }
-    ];
+    try {
+      const response = await axios.post('http://localhost:3000/credito360/login', {
+        email,
+        senha: password
+      });
 
-    console.log('Usuários mock:', mockUsers);
-    
-    const foundUser = mockUsers.find(u => {
-      console.log('Comparando:', { userEmail: u.email, inputEmail: email, userPassword: u.password, inputPassword: password });
-      return u.email.toLowerCase() === email.toLowerCase() && u.password === password;
-    });
-    
-    console.log('Usuário encontrado:', foundUser);
-    
-    if (foundUser) {
-      const { password: _, ...userWithoutPassword } = foundUser;
-      console.log('Login bem-sucedido:', userWithoutPassword);
-      setUser(userWithoutPassword);
-      localStorage.setItem('user', JSON.stringify(userWithoutPassword));
+      const usuario = response.data.usuario;
+
+      if (!usuario) return false;
+
+      setUser(usuario);
+      localStorage.setItem('user', JSON.stringify(usuario));
       return true;
+    } catch (error) {
+      console.error('Erro ao fazer login:', error);
+      return false;
     }
-    
-    console.log('Login falhou - credenciais inválidas');
-    return false;
   };
 
   const register = async (userData: Omit<User, 'id'> & { password: string }): Promise<boolean> => {
-    console.log('Tentativa de registro:', userData);
-    
-    // Simulação de registro
-    const newUser: User = {
-      ...userData,
-      id: Date.now().toString(),
-    };
-    
-    // Remove password do objeto final
-    const { password: _, ...userWithoutPassword } = userData;
-    const finalUser = { ...userWithoutPassword, id: newUser.id };
-    
-    console.log('Registro bem-sucedido:', finalUser);
-    setUser(finalUser);
-    localStorage.setItem('user', JSON.stringify(finalUser));
-    return true;
+    try {
+      await axios.post('http://localhost:3000/credito360/clientes', {
+        nome: userData.name,
+        cpf: userData.document,
+        email: userData.email,
+        senha: userData.password
+      });
+
+      return true;
+    } catch (error) {
+      console.error('Erro ao registrar:', error);
+      return false;
+    }
   };
 
   const logout = () => {
-    console.log('Logout realizado');
     setUser(null);
     localStorage.removeItem('user');
   };
