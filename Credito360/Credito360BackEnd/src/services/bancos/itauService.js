@@ -26,7 +26,7 @@ async function obterExtrato(numeroConta) {
 async function calcularScore(transacoes, saldo) {
     const totalTransacoes = transacoes.reduce((total, t) => total + t.valor, 0);
     const base = saldo + totalTransacoes;
-    return Math.max(0, Math.round(base / 100));
+    return Math.max(0, Math.round(base / 10));
 }
 
 async function obterOfertas(score) {

@@ -30,7 +30,9 @@ async function atualizarScore(req, res) {
     let contador = 0;
 
     for (const [nomeBanco, numeroConta] of Object.entries(bancos)) {
-        const service = servicos[nomeBanco.toLowerCase()];
+        const chaveNormalizada = nomeBanco.trim().toLowerCase().replace('ú', 'u').replace('é', 'e');
+        const service = servicos[chaveNormalizada];
+
         if (!service) continue;
 
         try {
