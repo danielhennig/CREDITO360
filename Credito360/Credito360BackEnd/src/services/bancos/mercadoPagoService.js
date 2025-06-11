@@ -1,4 +1,6 @@
 const axios = require('axios');
+const { scoreTransactions } = require('../../core/scoreAI');
+
 const BASE_URL = 'http://localhost:3003/mercadopago';
 
 async function obterExtrato(numeroConta) {
@@ -19,14 +21,12 @@ async function obterExtrato(numeroConta) {
             numeroConta: data.conta?.numeroConta || numeroConta,
             cpf: data.conta?.cpf || null
         }
-
     };
 }
 
-async function calcularScore(transacoes, saldo) {
-    const totalTransacoes = transacoes.reduce((total, t) => total + t.valor, 0);
-    const base = saldo + totalTransacoes;
-    return Math.max(0, Math.round(base / 10));
+// Agora o score será calculado pela IA com base nas transações
+async function calcularScore(transacoes) {
+    return await scoreTransactions(transacoes);
 }
 
 async function obterOfertas(score) {
