@@ -20,61 +20,35 @@ const ConnectBanks = () => {
 
   const availableBanks = [
     {
-      id: 'bb',
-      name: 'Banco do Brasil',
+      id: 'Sicredi',
+      name: 'Sicredi',
       logo: '🏛️',
       color: 'bg-yellow-500',
       status: 'available'
     },
     {
-      id: 'caixa',
-      name: 'Caixa Econômica Federal',
+      id: 'Banrisul',
+      name: 'Banrisul',
       logo: '🏦',
       color: 'bg-blue-600',
       status: 'available'
     },
-    {
-      id: 'nubank',
-      name: 'Nubank',
-      logo: '💜',
-      color: 'bg-purple-500',
-      status: 'connected'
-    },
+    
     {
       id: 'itau',
-      name: 'Itaú Unibanco',
+      name: 'Itaú ',
       logo: '🏢',
       color: 'bg-orange-500',
       status: 'available'
     },
     {
-      id: 'inter',
-      name: 'Banco Inter',
+      id: 'Mercado Pago',
+      name: 'Mercado Pago',
       logo: '🧡',
       color: 'bg-orange-600',
       status: 'available'
-    },
-    {
-      id: 'bradesco',
-      name: 'Bradesco',
-      logo: '🔴',
-      color: 'bg-red-600',
-      status: 'available'
-    },
-    {
-      id: 'santander',
-      name: 'Santander',
-      logo: '🔴',
-      color: 'bg-red-500',
-      status: 'available'
-    },
-    {
-      id: 'c6',
-      name: 'C6 Bank',
-      logo: '⚫',
-      color: 'bg-gray-800',
-      status: 'available'
     }
+    
   ];
 
   const handleConnectBank = async (bankId: string, bankName: string) => {

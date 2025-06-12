@@ -1,13 +1,15 @@
 
 import React from 'react';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { 
-  TrendingUp, 
-  CreditCard, 
-  Bell, 
+import {
+  TrendingUp,
+  CreditCard,
+  Bell,
   ShoppingCart,
   Award,
   Landmark,
@@ -18,9 +20,19 @@ import {
 
 const Dashboard = () => {
   // Simular dados do usuário
-  const creditProfile = JSON.parse(localStorage.getItem('creditProfile') || '{}');
+  const creditProfile = JSON.parse(localStorage.getItem('usuario') || '{}');
   const collectedData = JSON.parse(localStorage.getItem('collectedData') || '{}');
-  
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    const usuario = localStorage.getItem('usuario');
+    if (!token || !usuario) {
+      navigate('/login'); // Redireciona se não estiver autenticado
+    }
+  }, []);
+
   const mockNotifications = [
     {
       id: 1,
@@ -173,21 +185,18 @@ const Dashboard = () => {
                   {recentTransactions.map((transaction, index) => (
                     <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center space-x-3">
-                        <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                          transaction.type === 'credit' ? 'bg-green-100' : 'bg-red-100'
-                        }`}>
-                          <CreditCard className={`h-4 w-4 ${
-                            transaction.type === 'credit' ? 'text-green-600' : 'text-red-600'
-                          }`} />
+                        <div className={`w-8 h-8 rounded-full flex items-center justify-center ${transaction.type === 'credit' ? 'bg-green-100' : 'bg-red-100'
+                          }`}>
+                          <CreditCard className={`h-4 w-4 ${transaction.type === 'credit' ? 'text-green-600' : 'text-red-600'
+                            }`} />
                         </div>
                         <div>
                           <p className="font-medium text-gray-900">{transaction.description}</p>
                           <p className="text-sm text-gray-600">{transaction.date}</p>
                         </div>
                       </div>
-                      <div className={`font-semibold ${
-                        transaction.type === 'credit' ? 'text-green-600' : 'text-red-600'
-                      }`}>
+                      <div className={`font-semibold ${transaction.type === 'credit' ? 'text-green-600' : 'text-red-600'
+                        }`}>
                         {transaction.type === 'credit' ? '+' : ''}R$ {Math.abs(transaction.amount).toLocaleString('pt-BR')}
                       </div>
                     </div>
@@ -221,11 +230,10 @@ const Dashboard = () => {
             <CardContent>
               <div className="space-y-4">
                 {mockNotifications.map((notification) => (
-                  <div 
-                    key={notification.id} 
-                    className={`p-3 rounded-lg border-l-4 ${
-                      notification.urgent ? 'border-red-500 bg-red-50' : 'border-blue-500 bg-blue-50'
-                    }`}
+                  <div
+                    key={notification.id}
+                    className={`p-3 rounded-lg border-l-4 ${notification.urgent ? 'border-red-500 bg-red-50' : 'border-blue-500 bg-blue-50'
+                      }`}
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">

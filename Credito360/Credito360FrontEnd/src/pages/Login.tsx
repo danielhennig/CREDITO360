@@ -7,7 +7,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Eye, EyeOff, ArrowLeft } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useAuth } from '@/contexts/AuthContext';
-import axios from 'axios';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -15,48 +14,32 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const { login } = useAuth();
+  const { login } = useAuth(); // <- USANDO O CONTEXTO
   const navigate = useNavigate();
   const { toast } = useToast();
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
-    try {
-      const response = await axios.post('http://localhost:3000/credito360/login', {
-        email,
-        senha: password
-      });
+    const success = await login(email, password);
 
-      const token = response.data.token;
-      if (!token) throw new Error("Token não recebido");
-
-      localStorage.setItem('token', token);
-
-      // Set token no header para requisições futuras
-      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-
-      // Busca dados do perfil com o token
-      const perfilRes = await axios.get('http://localhost:3000/credito360/perfil');
-      localStorage.setItem('usuario', JSON.stringify(perfilRes.data));
-
+    if (success) {
       toast({
         title: "Login realizado com sucesso!",
         description: "Bem-vindo ao Crédito360",
       });
-
       navigate('/dashboard');
-    } catch (error) {
+    } else {
       toast({
         title: "Erro no login",
         description: "E-mail ou senha incorretos",
         variant: "destructive",
       });
-    } finally {
-      setIsLoading(false);
     }
-  };
 
+    setIsLoading(false);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50 flex items-center justify-center p-4">

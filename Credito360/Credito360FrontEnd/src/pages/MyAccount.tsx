@@ -7,12 +7,12 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@/components/ui/alert-dialog';
-import { 
-  User, 
-  Mail, 
-  FileText, 
-  Shield, 
-  Eye, 
+import {
+  User,
+  Mail,
+  FileText,
+  Shield,
+  Eye,
   EyeOff,
   Trash2,
   Save,
@@ -23,7 +23,8 @@ import { useToast } from '@/hooks/use-toast';
 const MyAccount = () => {
   const { user, logout } = useAuth();
   const { toast } = useToast();
-  
+  const usuario = JSON.parse(localStorage.getItem('usuario') || '{}');
+
   const [isEditing, setIsEditing] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
@@ -54,13 +55,13 @@ const MyAccount = () => {
       title: "Dados atualizados",
       description: "Suas informações foram salvas com sucesso",
     });
-    
+
     setIsEditing(false);
-    setFormData(prev => ({ 
-      ...prev, 
-      currentPassword: '', 
-      newPassword: '', 
-      confirmPassword: '' 
+    setFormData(prev => ({
+      ...prev,
+      currentPassword: '',
+      newPassword: '',
+      confirmPassword: ''
     }));
   };
 
@@ -112,12 +113,12 @@ const MyAccount = () => {
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="name">
-                    {user?.type === 'PJ' ? 'Razão Social' : 'Nome Completo'}
+                    {usuario?.type === 'PJ' ? 'Razão Social' : 'Nome Completo'}
                   </Label>
                   <Input
                     id="name"
                     name="name"
-                    value={formData.name}
+                    value={usuario?.nome}
                     onChange={handleInputChange}
                     disabled={!isEditing}
                     className={!isEditing ? 'bg-gray-50' : ''}
@@ -140,9 +141,9 @@ const MyAccount = () => {
 
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label>{user?.type === 'PJ' ? 'CNPJ' : 'CPF'}</Label>
+                  <Label>{usuario?.type === 'PJ' ? 'CNPJ' : 'CPF'}</Label>
                   <Input
-                    value={maskDocument(user?.document || '')}
+                    value={maskDocument(usuario.cpf || '')}
                     disabled
                     className="bg-gray-50"
                   />
@@ -167,7 +168,7 @@ const MyAccount = () => {
               {isEditing && (
                 <div className="space-y-4 pt-4 border-t">
                   <h4 className="font-medium text-gray-900">Alterar Senha (opcional)</h4>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="currentPassword">Senha Atual</Label>
                     <div className="relative">
@@ -249,7 +250,7 @@ const MyAccount = () => {
                 <p className="text-sm text-red-700 mb-4">
                   Esta ação não pode ser desfeita. Todos os seus dados serão permanentemente removidos.
                 </p>
-                
+
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
                     <Button variant="destructive" size="sm">
@@ -266,7 +267,7 @@ const MyAccount = () => {
                     </AlertDialogHeader>
                     <AlertDialogFooter>
                       <AlertDialogCancel>Cancelar</AlertDialogCancel>
-                      <AlertDialogAction 
+                      <AlertDialogAction
                         onClick={handleDeleteAccount}
                         className="bg-red-600 hover:bg-red-700"
                       >
@@ -327,12 +328,12 @@ const MyAccount = () => {
                   <span className="text-gray-600">Política de Privacidade</span>
                   <Button variant="ghost" size="sm">Ver</Button>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="text-gray-600">Termos de Uso</span>
                   <Button variant="ghost" size="sm">Ver</Button>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="text-gray-600">Consentimento Open Finance</span>
                   <Button variant="ghost" size="sm">Gerenciar</Button>
