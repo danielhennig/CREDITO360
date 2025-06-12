@@ -1,23 +1,21 @@
 const jwt = require('jsonwebtoken');
+const SECRET = process.env.JWT_SECRET || 'seuSegredoSuperSeguro';
 
-module.exports = (req, res, next) => {
+function authMiddleware(req, res, next) {
     const authHeader = req.headers.authorization;
-
-    if (!authHeader) {
-        return res.status(401).json({ erro: 'Token não fornecido.' });
+    if (!authHeader?.startsWith('Bearer ')) {
+        return res.status(401).json({ erro: 'Token ausente ou mal formatado.' });
     }
 
-    const token = authHeader.split(' ')[1]; // "Bearer token"
-
-    if (!token) {
-        return res.status(401).json({ erro: 'Token mal formatado.' });
-    }
+    const token = authHeader.split(' ')[1];
 
     try {
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        req.usuario = decoded; // injeta o payload do token (id, email)
+        const decoded = jwt.verify(token, SECRET);
+        req.user = decoded;
         next();
-    } catch (error) {
-        return res.status(403).json({ erro: 'Token inválido ou expirado.' });
+    } catch (err) {
+        return res.status(401).json({ erro: 'Token inválido.' });
     }
-};
+}
+
+module.exports = authMiddleware;

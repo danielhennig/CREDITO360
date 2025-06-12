@@ -41,10 +41,16 @@ module.exports = {
     },
     async obterPerfil(req, res) {
         try {
-            const clienteId = req.usuario.id;
+            // 🔁 Aqui usamos o email vindo do token (extraído no authMiddleware)
+            const { email } = req.user;
 
-            const cliente = await Cliente.findByPk(clienteId, {
-                attributes: { exclude: ['senha'] } // oculta a senha
+            if (!email) {
+                return res.status(400).json({ erro: 'Token inválido: e-mail ausente' });
+            }
+
+            const cliente = await Cliente.findOne({
+                where: { email },
+                attributes: ['id', 'nome', 'cpf', 'email']
             });
 
             if (!cliente) {
