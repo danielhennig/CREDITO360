@@ -40,32 +40,31 @@ async function atualizarScore(req, res) {
     for (const [nomeBanco, numeroConta] of Object.entries(bancos)) {
         const chave = normalizarNomeBanco(nomeBanco);
         const service = servicos[chave];
-
         if (!service) continue;
 
         try {
             const { transacoes, cliente } = await service.obterExtrato(numeroConta);
             const score = await scoreTransactions(transacoes);
-            const ofertas = await service.obterOfertas(score);
 
-            resultado.bancos.push({
-                banco: nomeBanco,
-                cliente,
-                score,
-                ofertas
-            });
-
+            resultado.bancos.push({ banco: nomeBanco, cliente, score });
             somaScores += score;
             contador++;
         } catch (erro) {
-            resultado.bancos.push({
-                banco: nomeBanco,
-                erro: erro.message
-            });
+            resultado.bancos.push({ banco: nomeBanco, erro: erro.message });
         }
     }
 
     resultado.scoreTotal = contador ? Math.round(somaScores / contador) : 0;
+
+    // === SEGUNDO LOOP: ofertas com scoreTotal ===
+    for (const item of resultado.bancos) {
+        const chave = normalizarNomeBanco(item.banco);
+        const service = servicos[chave];
+        if (service && !item.erro) {
+            item.ofertas = await service.obterOfertas(resultado.scoreTotal);
+        }
+    }
+
     return res.json(resultado);
 }
 

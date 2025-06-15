@@ -47,7 +47,6 @@ function generateSyntheticTransactions(
       const txDate = new Date(startDate.getTime() + randDay * 24 * 60 * 60 * 1000);
       const gauss = randomNormal([1], 0, 500).arraySync()[0];
       const amt = gauss >= 0 ? gauss + 10 : gauss - 10;
-      // para treino, distribuímos aleatoriamente entre depósitos e saques
       if (Math.random() < 0.5) {
         rows.push({ client_id: cid, deposit: Math.abs(amt), withdrawal: 0, date: txDate.toISOString().slice(0, 10) });
       } else {
@@ -94,31 +93,32 @@ function consolidateFeatures(
   return features;
 }
 
+// ============================================================================
+// 3) Geração de scores sintéticos de 300 a 1000
+// ============================================================================
+
 function generateSyntheticScore(features) {
-  const maxB = 10000, maxD = 5000, maxW = 5000;
   const wBal = 0.40, wDep = 0.35, wWit = 0.25;
   return features.map(row => {
-    let nb = Math.min(Math.max(row.total_balance / maxB, 0), 1);
-    let nd = Math.min(Math.max(row.weighted_deposit / maxD, 0), 1);
-    let nw = Math.min(Math.max(row.weighted_withdrawal / maxW, 0), 1);
+    const nb = Math.min(Math.max(row.total_balance / 10000, 0), 1);
+    const nd = Math.min(Math.max(row.weighted_deposit / 5000, 0), 1);
+    const nw = Math.min(Math.max(row.weighted_withdrawal / 5000, 0), 1);
     let scoreNorm = Math.min(Math.max(nb * wBal + nd * wDep - nw * wWit, 0), 1);
-    const base = 300 + scoreNorm * 550;
-    const noise = randomNormal([1], 0, 5).arraySync()[0];
-    return Math.round(Math.min(Math.max(base + noise, 300), 850));
+    const base = 300 + scoreNorm * 700;  // escala de 300–1000
+    const noise = randomNormal([1], 0, 20).arraySync()[0];
+    const raw = base + noise;
+    return Math.round(Math.min(Math.max(raw, 300), 1000));
   });
 }
 
 // ============================================================================
-// 3) Normalização e funções de feature-extraction para inferência
+// 4) Normalização e feature-extraction para inferência
 // ============================================================================
 
 function normalizeFeaturesRaw(tb, wd, ww) {
   return [tb / 10000, wd / 5000, ww / 5000];
 }
 
-/**
- * Para inferência: transações com campos separadas deposit/withdrawal
- */
 function computeFeaturesForClient(
   transactions,
   referenceDate = '2025-06-01',
@@ -139,7 +139,7 @@ function computeFeaturesForClient(
 }
 
 // ============================================================================
-// 4) Preparar dataset e treinar modelo em memória
+// 5) Preparar dataset e treinar modelo em memória
 // ============================================================================
 
 async function prepareDataset() {
@@ -151,20 +151,21 @@ async function prepareDataset() {
   const scores = generateSyntheticScore(featArr);
 
   const Xs = featArr.map(r => normalizeFeaturesRaw(r.total_balance, r.weighted_deposit, r.weighted_withdrawal));
-  const ys = scores.map(s => (s - 300) / 550);
+  // labels normalizados de 300–1000 para [0,1]
+  const ys = scores.map(s => (s - 300) / 700);
 
   const idx = Array.from(tf.util.createShuffledIndices(Xs.length));
   const trainCount = Math.floor(Xs.length * 0.8);
   const trainIdx = idx.slice(0, trainCount), testIdx = idx.slice(trainCount);
 
   const X_train = trainIdx.map(i => Xs[i]), y_train = trainIdx.map(i => ys[i]);
-  const X_test  = testIdx.map(i => Xs[i]), y_test  = testIdx.map(i => [ys[i]]);
+  const X_test = testIdx.map(i => Xs[i]), y_test = testIdx.map(i => [ys[i]]);
 
   return {
     xsTrainTensor: tf.tensor2d(X_train),
-    ysTrainTensor: tf.tensor2d(y_train.map(v=>[v])),
-    xsTestTensor:  tf.tensor2d(X_test),
-    ysTestTensor:  tf.tensor2d(y_test)
+    ysTrainTensor: tf.tensor2d(y_train.map(v => [v])),
+    xsTestTensor: tf.tensor2d(X_test),
+    ysTestTensor: tf.tensor2d(y_test)
   };
 }
 
@@ -180,11 +181,7 @@ async function trainModelInMemory() {
   console.log('Treinando por 100 epochs…');
   await model.fit(xsTrainTensor, ysTrainTensor, {
     epochs: 100, batchSize: 64, validationSplit: 0.1,
-    callbacks: {
-      onEpochEnd: (e, logs) => {
-        if (e % 10 === 0) console.log(`Epoch ${e}: loss=${logs.loss.toFixed(4)}, val_loss=${logs.val_loss.toFixed(4)}`);
-      }
-    }
+    callbacks: { onEpochEnd: (e, logs) => { if (e % 10 === 0) console.log(`Epoch ${e}: loss=${logs.loss.toFixed(4)}, val_loss=${logs.val_loss.toFixed(4)}`); } }
   });
 
   console.log('Avaliação no teste…');
@@ -196,7 +193,7 @@ async function trainModelInMemory() {
 }
 
 // ============================================================================
-// 5) Iniciar servidor após treino
+// 6) Iniciar servidor após treino
 // ============================================================================
 
 (async () => {
@@ -225,8 +222,8 @@ async function trainModelInMemory() {
       const input = tf.tensor2d([[tbN, wdN, wwN]]);
       let predN = (await model.predict(input).array())[0][0];
       predN = Math.min(Math.max(predN, 0), 1);
-      let score = 300 + predN * 550;
-      score = Math.round(Math.min(Math.max(score, 300), 850));
+      let score = 300 + predN * 700;  // map back to 300–1000
+      score = Math.round(Math.min(Math.max(score, 300), 1000));
 
       return res.json({ score });
     } catch (err) {
