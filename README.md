@@ -49,6 +49,7 @@ CREDITO360/
 # 1. Clone o repositório
 git clone https://github.com/danielhennig/CREDITO360.git
 cd CREDITO360
+npm install
 
 # 2. Construa as imagens Docker
 docker compose build
