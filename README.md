@@ -57,7 +57,7 @@ docker compose build
 # 3. Suba todos os serviços (APIs + Frontends)
 docker compose up -d
 
-# 4. (Opcional) Resete todos os bancos com migrations + seeds
+# 4. (Opcional mas recomendado) Resete todos os bancos com migrations + seeds
 npm run reset-todos
 ```
 
@@ -85,10 +85,19 @@ npm run reset-todos
 
 ---
 
-## 🧪 Testes e Debug
+## 🧪 Testes com Seeds 
 
 - Acesse o frontend Credito360: http://localhost:3005
+  `Crie uma conta, porem cpf deve ser 123.456.789-00`
+  `Dados de conecxao de contas:`
+  `Itau: Numero 111111 , Senha 123456`
+  `Sicredi: Numero 222222 , Senha 123456`
+  `Mercado Pago: Numero 333333 , Senha 123456`
+  `Banrisul: Numero 444444 , Senha 123456`
+  
 - Acesse o frontend Banco360: http://localhost:3006
+  `Plataforma para gerenciar e criar contas, fazer transacoes e criar ofertas de credito`
+  
 - A API central responde em: http://localhost:3000
 - As APIs dos bancos simulados:
   - Itaú: http://localhost:3001
