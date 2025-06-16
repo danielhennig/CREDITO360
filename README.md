@@ -85,25 +85,64 @@ npm run reset-todos
 
 ---
 
-## 🧪 Testes com Seeds 
+# 🧪 Testes com Seeds – Sistema Crédito360
 
-- Acesse o frontend Credito360: http://localhost:3005
-  `Crie uma conta, porem cpf deve ser 123.456.789-00`
-  `Dados de conecxao de contas:`
-  `Itau: Numero 111111 , Senha 123456`
-  `Sicredi: Numero 222222 , Senha 123456`
-  `Mercado Pago: Numero 333333 , Senha 123456`
-  `Banrisul: Numero 444444 , Senha 123456`
-  
-- Acesse o frontend Banco360: http://localhost:3006
-  `Plataforma para gerenciar e criar contas, fazer transacoes e criar ofertas de credito`
-  
-- A API central responde em: http://localhost:3000
-- As APIs dos bancos simulados:
-  - Itaú: http://localhost:3001
-  - Sicredi: http://localhost:3002
-  - Mercado Pago: http://localhost:3003
-  - Banrisul: http://localhost:3004
+## 🚀 Frontend Principal
+
+Acesse a interface principal do sistema:
+
+🔗 [Credi360 Frontend](http://localhost:3005)
+
+### 👉 Crie uma conta com os seguintes dados:
+
+- **CPF obrigatório para testes:** `123.456.789-00`
+
+---
+
+## 🔐 Dados de Conexão com Bancos Simulados
+
+Use essas credenciais ao conectar contas no painel do Crédito360:
+
+| Banco         | Número da Conta | Senha   |
+|---------------|------------------|---------|
+| Itaú          | `111111`         | `123456`|
+| Sicredi       | `222222`         | `123456`|
+| Mercado Pago  | `333333`         | `123456`|
+| Banrisul      | `444444`         | `123456`|
+
+---
+
+## 🧮 Plataforma Banco360
+
+🔗 [Banco360 Frontend](http://localhost:3006)
+
+> Interface para gerenciar contas, realizar transações e criar ofertas de crédito personalizadas.
+
+---
+
+## 🌐 APIs REST
+
+### 📡 API Central (Crédito360)
+- URL: [http://localhost:3000](http://localhost:3000)
+
+### 🏦 APIs dos Bancos Simulados
+
+| Banco         | Porta | Link                           |
+|---------------|-------|--------------------------------|
+| Itaú          | 3001  | [http://localhost:3001](http://localhost:3001) |
+| Sicredi       | 3002  | [http://localhost:3002](http://localhost:3002) |
+| Mercado Pago  | 3003  | [http://localhost:3003](http://localhost:3003) |
+| Banrisul      | 3004  | [http://localhost:3004](http://localhost:3004) |
+
+---
+
+✅ **Tudo pronto para iniciar os testes com migrações e dados seeds!**
+
+Se ocorrer algum erro, verifique os logs com:
+
+```bash
+docker compose logs -f
+
 
 ---
 
