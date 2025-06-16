@@ -23,6 +23,16 @@ module.exports = {
       { contaId: joao.id, numeroConta: joao.numeroConta, tipo: 'deposito', valor: 300 },
       { contaId: joao.id, numeroConta: joao.numeroConta, tipo: 'saque', valor: 100 },
       { contaId: joao.id, numeroConta: joao.numeroConta, tipo: 'deposito', valor: 1500 },
+      { contaId: joao.id, numeroConta: joao.numeroConta, tipo: 'deposito', valor: 1000 },
+      { contaId: joao.id, numeroConta: joao.numeroConta, tipo: 'saque', valor: 200 },
+      { contaId: joao.id, numeroConta: joao.numeroConta, tipo: 'deposito', valor: 300 },
+      { contaId: joao.id, numeroConta: joao.numeroConta, tipo: 'saque', valor: 100 },
+      { contaId: joao.id, numeroConta: joao.numeroConta, tipo: 'deposito', valor: 1500 },
+      { contaId: joao.id, numeroConta: joao.numeroConta, tipo: 'deposito', valor: 1000 },
+      { contaId: joao.id, numeroConta: joao.numeroConta, tipo: 'saque', valor: 200 },
+      { contaId: joao.id, numeroConta: joao.numeroConta, tipo: 'deposito', valor: 300 },
+      { contaId: joao.id, numeroConta: joao.numeroConta, tipo: 'saque', valor: 100 },
+      { contaId: joao.id, numeroConta: joao.numeroConta, tipo: 'deposito', valor: 1500 },
 
 
     ];
