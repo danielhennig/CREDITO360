@@ -1,7 +1,7 @@
 const axios = require('axios');
 const { scoreTransactions } = require('../../core/scoreAI');
 
-const BASE_URL = 'http://localhost:3002/sicredi';
+const BASE_URL = 'http://sicredi-backend:3002/sicredi';
 
 async function obterExtrato(numeroConta) {
     const { data } = await axios.get(`${BASE_URL}/open-finance/dados`, {

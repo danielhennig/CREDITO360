@@ -7,30 +7,21 @@
     "open": "^10.1.2"
   },
   "scripts": {
-    "install:backend": "cd Credito360/Credito360BackEnd && npm install",
-    "install:frontend": "cd Credito360/Credito360FrontEnd && npm install",
-    "install:itau": "cd Itau/ItauBackEnd && npm install",
-    "install:sicredi": "cd Sicredi/SicrediBackEnd && npm install",
-    "install:banrisul": "cd Banrisul/BanrisulBackEnd && npm install",
-    "install:banrisulfront": "cd Banrisul/BanrisulFrontEnd && npm install",
-    "install:mercadopago": "cd MercadoPago/MercadoPagoBackEnd && npm install",
-    "install-todos": "npm-run-all --parallel install:*",
-
-    "start:backend": "cd Credito360/Credito360BackEnd && npm run dev",
-    "start:backendia": "cd Credito360/Credito360BackEnd && npm run serve",
-    "start:frontend": "cd Credito360/Credito360FrontEnd && npm run dev",
-    "start:itau": "cd Itau/ItauBackEnd && npm run dev",
-    "start:sicredi": "cd Sicredi/SicrediBackEnd && npm run dev",
-    "start:banrisul": "cd Banrisul/BanrisulBackEnd && npm run dev",
-    "start:banrisulfront": "cd Banrisul/BanrisulFrontEnd && npm run dev",
-    "start:mercadopago": "cd MercadoPago/MercadoPagoBackEnd && npm run dev",
-    "start-todos": "npm-run-all --parallel start:*",
-
-    "reset:credito": "cd Credito360/Credito360BackEnd && npx sequelize-cli db:migrate:undo && npx sequelize-cli db:migrate",
-    "reset:itau": "cd Itau/ItauBackEnd && npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
-    "reset:sicredi": "cd Sicredi/SicrediBackEnd && npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
-    "reset:banrisul": "cd Banrisul/BanrisulBackEnd && npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
-    "reset:mercadopago": "cd MercadoPago/MercadoPagoBackEnd && npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "start:backend": "docker compose up -d credito360-backend",
+    "start:backendia": "docker compose up -d credito360-ia",
+    "start:frontend": "docker compose up -d credito360-frontend",
+    "start:itau": "docker compose up -d itau-backend",
+    "start:sicredi": "docker compose up -d sicredi-backend",
+    "start:banrisul": "docker compose up -d banrisul-backend",
+    "start:banrisulfront": "docker compose up -d banrisul-frontend",
+    "start:mercadopago": "docker compose up -d mercadopago-backend",
+    "start-todos": "docker compose up",
+    
+    "reset:credito": "docker compose exec credito360-backend  sh -c \"npx sequelize-cli db:migrate:undo && npx sequelize-cli db:migrate\"",
+    "reset:itau": "docker compose exec itau-backend        sh -c \"npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all\"",
+    "reset:sicredi": "docker compose exec sicredi-backend     sh -c \"npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all\"",
+    "reset:banrisul": "docker compose exec banrisul-backend    sh -c \"npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all\"",
+    "reset:mercadopago": "docker compose exec mercadopago-backend sh -c \"npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all\"",
     "reset-todos": "npm-run-all --parallel reset:*"
   }
 }

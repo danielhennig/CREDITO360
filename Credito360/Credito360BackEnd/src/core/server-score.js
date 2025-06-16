@@ -1,9 +1,11 @@
 // server-score.js
+const express = require('express');
+const cors = require('cors');
+const tf = require('@tensorflow/tfjs');
 
-import express from 'express';
-import cors from 'cors';
-import * as tf from '@tensorflow/tfjs';
-import { randomNormal } from '@tensorflow/tfjs';
+// O `randomNormal` é uma função do tf
+const { randomNormal } = tf;
+
 
 // ============================================================================
 // 1) Auxiliares de data e peso de recência

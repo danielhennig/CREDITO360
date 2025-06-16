@@ -1,7 +1,7 @@
 const axios = require('axios');
 const { scoreTransactions } = require('../../core/scoreAI');
 
-const BASE_URL = 'http://localhost:3004/banrisul';
+const BASE_URL = 'http://banrisul-backend:3004/banrisul';
 
 async function obterExtrato(numeroConta) {
     const { data } = await axios.get(`${BASE_URL}/open-finance/dados`, {

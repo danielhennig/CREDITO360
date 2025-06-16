@@ -1,0 +1,229 @@
+x-node-env: &node-env
+  NODE_ENV: development
+  DB_PORT: 5432
+
+services:
+  # -------------------- BANCO DE DADOS PRINCIPAL --------------------
+  credito360-db:
+    image: postgres:15-alpine
+    container_name: credito360-db
+    restart: always
+    environment:
+      POSTGRES_DB: Credito360
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+    volumes:
+      - credito360-pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  # -------------------- BACK-END PRINCIPAL --------------------
+  credito360-backend:
+    build:
+      context: ./Credito360/Credito360BackEnd
+      dockerfile: ../../docker/backend.Dockerfile
+    container_name: credito360-backend
+    ports:
+      - "3000:3000"
+    environment:
+      <<: *node-env
+      PORT: 3000
+      DB_HOST: credito360-db
+      DB_NAME: Credito360
+      DB_USER: postgres
+      DB_PASSWORD: 1234
+    volumes:
+      - ./Credito360/Credito360BackEnd:/app
+      - /app/node_modules
+    depends_on:
+      - credito360-db
+
+  # -------------------- SERVIÇO DE IA --------------------
+  credito360-ia:
+    build:
+      context: ./Credito360/Credito360BackEnd
+      dockerfile: ../../docker/backend.Dockerfile
+    container_name: credito360-ia
+    command: ["npm", "run", "serve"]
+    ports:
+      - "5000:5000"
+    environment:
+      <<: *node-env
+      PORT: 5000
+    volumes:
+      - ./Credito360/Credito360BackEnd:/app
+      - /app/node_modules
+    depends_on:
+      - credito360-backend
+
+  # -------------------- FRONT-END PRINCIPAL --------------------
+  credito360-frontend:
+    build:
+      context: ./Credito360/Credito360FrontEnd
+      dockerfile: ../../docker/frontend.Dockerfile
+    container_name: credito360-frontend
+    command: ["npm", "run", "dev", "--", "--port", "3005", "--open"]
+    ports:
+      - "3005:3005"
+    environment:
+      <<: *node-env
+    volumes:
+      - ./Credito360/Credito360FrontEnd:/app
+      - /app/node_modules
+
+  # -------------------- ITAÚ --------------------
+  itau-db:
+    image: postgres:15-alpine
+    container_name: itau-db
+    restart: always
+    environment:
+      POSTGRES_DB: BancoItau
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+    volumes:
+      - itau-pgdata:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+  itau-backend:
+    build:
+      context: ./Itau/ItauBackEnd
+      dockerfile: ../../docker/backend.Dockerfile
+    container_name: itau-backend
+    ports:
+      - "3001:3001"
+    environment:
+      <<: *node-env
+      PORT: 3001
+      DB_HOST: itau-db
+      DB_NAME: BancoItau
+      DB_USER: postgres
+      DB_PASSWORD: 1234
+    volumes:
+      - ./Itau/ItauBackEnd:/app
+      - /app/node_modules
+    depends_on:
+      - itau-db
+
+  # -------------------- SICREDI --------------------
+  sicredi-db:
+    image: postgres:15-alpine
+    container_name: sicredi-db
+    restart: always
+    environment:
+      POSTGRES_DB: BancoSicredi
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+    volumes:
+      - sicredi-pgdata:/var/lib/postgresql/data
+    ports:
+      - "5434:5432"
+
+  sicredi-backend:
+    build:
+      context: ./Sicredi/SicrediBackEnd
+      dockerfile: ../../docker/backend.Dockerfile
+    container_name: sicredi-backend
+    ports:
+      - "3002:3002"
+    environment:
+      <<: *node-env
+      PORT: 3002
+      DB_HOST: sicredi-db
+      DB_NAME: BancoSicredi
+      DB_USER: postgres
+      DB_PASSWORD: 1234
+    volumes:
+      - ./Sicredi/SicrediBackEnd:/app
+      - /app/node_modules
+    depends_on:
+      - sicredi-db
+
+  # -------------------- MERCADO PAGO --------------------
+  mercadopago-db:
+    image: postgres:15-alpine
+    container_name: mercadopago-db
+    restart: always
+    environment:
+      POSTGRES_DB: BancoMercadoPago
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+    volumes:
+      - mercadopago-pgdata:/var/lib/postgresql/data
+    ports:
+      - "5435:5432"
+
+  mercadopago-backend:
+    build:
+      context: ./MercadoPago/MercadoPagoBackEnd
+      dockerfile: ../../docker/backend.Dockerfile
+    container_name: mercadopago-backend
+    ports:
+      - "3003:3003"
+    environment:
+      <<: *node-env
+      PORT: 3003
+      DB_HOST: mercadopago-db
+      DB_NAME: BancoMercadoPago
+      DB_USER: postgres
+      DB_PASSWORD: 1234
+    volumes:
+      - ./MercadoPago/MercadoPagoBackEnd:/app
+      - /app/node_modules
+    depends_on:
+      - mercadopago-db
+
+  # -------------------- BANRISUL --------------------
+  banrisul-db:
+    image: postgres:15-alpine
+    container_name: banrisul-db
+    restart: always
+    environment:
+      POSTGRES_DB: BancoBanrisul
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+    volumes:
+      - banrisul-pgdata:/var/lib/postgresql/data
+    ports:
+      - "5436:5432"
+
+  banrisul-backend:
+    build:
+      context: ./Banrisul/BanrisulBackEnd
+      dockerfile: ../../docker/backend.Dockerfile
+    container_name: banrisul-backend
+    ports:
+      - "3004:3004"
+    environment:
+      <<: *node-env
+      PORT: 3004
+      DB_HOST: banrisul-db
+      DB_NAME: BancoBanrisul
+      DB_USER: postgres
+      DB_PASSWORD: 1234
+    volumes:
+      - ./Banrisul/BanrisulBackEnd:/app
+      - /app/node_modules
+    depends_on:
+      - banrisul-db
+
+  banrisul-frontend:
+    build:
+      context: ./Banrisul/BanrisulFrontEnd
+      dockerfile: ../../docker/frontend.Dockerfile
+    container_name: banrisul-frontend
+    command: ["npm", "run", "dev", "--", "--port", "3006", "--open"]
+    ports:
+      - "3006:3006"
+    environment:
+      <<: *node-env
+    volumes:
+      - ./Banrisul/BanrisulFrontEnd:/app
+      - /app/node_modules
+
+volumes:
+  credito360-pgdata:
+  itau-pgdata:
+  sicredi-pgdata:
+  mercadopago-pgdata:
+  banrisul-pgdata:

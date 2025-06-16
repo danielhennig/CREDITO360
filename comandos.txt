@@ -1,3 +1,41 @@
 npm run install-todos     # Instala tudo
 npm run start-todos       # Roda todos os servidores (React, Backend, Bancos)
 npm run reset-todos       # Reseta todos os bancos com migrations + seeds
+
+
+
+# 1 Construir imagens na primeira vez
+docker compose build
+
+# 2 Subir tudo
+docker compose up -d
+
+
+
+
+
+"install:backend": "cd Credito360/Credito360BackEnd && npm install",
+    "install:frontend": "cd Credito360/Credito360FrontEnd && npm install",
+    "install:itau": "cd Itau/ItauBackEnd && npm install",
+    "install:sicredi": "cd Sicredi/SicrediBackEnd && npm install",
+    "install:banrisul": "cd Banrisul/BanrisulBackEnd && npm install",
+    "install:banrisulfront": "cd Banrisul/BanrisulFrontEnd && npm install",
+    "install:mercadopago": "cd MercadoPago/MercadoPagoBackEnd && npm install",
+    "install-todos": "npm-run-all --parallel install:*",
+
+    "start2:backend": "cd Credito360/Credito360BackEnd && npm run dev",
+    "start2:backendia": "cd Credito360/Credito360BackEnd && npm run serve",
+    "start2:frontend": "cd Credito360/Credito360FrontEnd && npm run dev",
+    "start2:itau": "cd Itau/ItauBackEnd && npm run dev",
+    "start2:sicredi": "cd Sicredi/SicrediBackEnd && npm run dev",
+    "start2:banrisul": "cd Banrisul/BanrisulBackEnd && npm run dev",
+    "start2:banrisulfront": "cd Banrisul/BanrisulFrontEnd && npm run dev",
+    "start2:mercadopago": "cd MercadoPago/MercadoPagoBackEnd && npm run dev",
+    "start-todos2": "npm-run-all --parallel start:*",
+
+    "reset:credito2": "cd Credito360/Credito360BackEnd && npx sequelize-cli db:migrate:undo && npx sequelize-cli db:migrate",
+    "reset:itau2": "cd Itau/ItauBackEnd && npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "reset:sicredi2": "cd Sicredi/SicrediBackEnd && npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "reset:banrisul2": "cd Banrisul/BanrisulBackEnd && npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "reset:mercadopago2": "cd MercadoPago/MercadoPagoBackEnd && npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "reset-todos2": "npm-run-all --parallel reset:*",

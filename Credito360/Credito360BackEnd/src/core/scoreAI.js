@@ -33,7 +33,7 @@ async function scoreTransactions(transactions) {
     const formattedTx = convertTransactions(transactions);
 
     try {
-        const { data } = await axios.post('http://localhost:5000/predict', {
+        const { data } = await axios.post('http://credito360-ia:5000/predict', {
             transactions: formattedTx,
             referenceDate: '2025-06-01',
             windowDays: 180

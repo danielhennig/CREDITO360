@@ -1,7 +1,7 @@
 const axios = require('axios');
 const { scoreTransactions } = require('../../core/scoreAI');
 
-const BASE_URL = 'http://localhost:3003/mercadopago';
+const BASE_URL = 'http://mercadopago-backend:3003/mercadopago';
 
 async function obterExtrato(numeroConta) {
     const { data } = await axios.get(`${BASE_URL}/open-finance/dados`, {
