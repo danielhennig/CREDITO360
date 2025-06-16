@@ -59,6 +59,11 @@ docker compose up -d
 
 # 4. (Opcional mas recomendado) Resete todos os bancos com migrations + seeds
 npm run reset-todos
+
+# 5. Para desligar o docker
+docker compose down
+docker compose down -v (exclui os dados)
+
 ```
 
 ---
