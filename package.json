@@ -1,0 +1,33 @@
+{
+  "name": "credito360-root",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "install:backend": "cd Credito360/Credito360BackEnd && npm install",
+    "install:frontend": "cd Credito360/Credito360FrontEnd && npm install",
+    "install:itau": "cd Itau/ItauBackEnd && npm install",
+    "install:sicredi": "cd Sicredi/SicrediBackEnd && npm install",
+    "install:banrisul": "cd Banrisul/BanrisulBackEnd && npm install",
+    "install:banrisulfront": "cd Banrisul/BanrisulFrontEnd && npm install",
+    "install:mercadopago": "cd MercadoPago/MercadoPagoBackEnd && npm install",
+    "install-todos": "npm-run-all --parallel install:*",
+
+    "start:backend": "cd Credito360/Credito360BackEnd && npm run dev",
+    "start:frontend": "cd Credito360/Credito360FrontEnd && npm run dev",
+    "start:itau": "cd Itau/ItauBackEnd && npm run dev",
+    "start:sicredi": "cd Sicredi/SicrediBackEnd && npm run dev",
+    "start:banrisul": "cd Banrisul/BanrisulBackEnd && npm run dev",
+    "start:banrisulfront": "cd Banrisul/BanrisulFrontEnd && npm run dev",
+    "start:mercadopago": "cd MercadoPago/MercadoPagoBackEnd && npm run dev",
+    "start-todos": "npm-run-all --parallel start:*",
+
+    "reset:itau": "cd Bancos/Itaú/ItauBackEnd && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "reset:sicredi": "cd Bancos/Sicredi/SicrediBackEnd && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "reset:banrisul": "cd Bancos/Banrisul/BanrisulBackEnd && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "reset:mercadopago": "cd Bancos/MercadoPago/MercadoPagoBackEnd && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "reset-todos": "npm-run-all --parallel reset:*"
+  }
+}

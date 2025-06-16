@@ -1,0 +1,3 @@
+npm run install-todos     # Instala tudo
+npm run start-todos       # Roda todos os servidores (React, Backend, Bancos)
+npm run reset-todos       # Reseta todos os bancos com migrations + seeds
