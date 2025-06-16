@@ -40,5 +40,6 @@ module.exports = {
 
   down: async (queryInterface) => {
     await queryInterface.dropTable('Cliente');
+    await queryInterface.sequelize.query(`DROP EXTENSION IF EXISTS "uuid-ossp";`);
   }
 };
