@@ -16,6 +16,7 @@
     "install-todos": "npm-run-all --parallel install:*",
 
     "start:backend": "cd Credito360/Credito360BackEnd && npm run dev",
+    "start:backendia": "cd Credito360/Credito360BackEnd && npm run serve",
     "start:frontend": "cd Credito360/Credito360FrontEnd && npm run dev",
     "start:itau": "cd Itau/ItauBackEnd && npm run dev",
     "start:sicredi": "cd Sicredi/SicrediBackEnd && npm run dev",
