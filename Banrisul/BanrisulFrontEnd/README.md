@@ -1,73 +1,93 @@
-# Welcome to your Lovable project
+💻 BanrisulFrontEnd – Interface Web Simulada do Banco Banrisul (Open Finance)
+Este projeto representa o frontend (interface do usuário) do sistema bancário simulado do Banrisul, projetado para integrar-se ao ecossistema Open Finance. Ele permite que o cliente gerencie sua conta, visualize extratos, conecte-se com o sistema Crédito360 e veja ofertas de crédito com base no score.
 
-## Project info
+🧩 Funcionalidades
+✅ Cadastro de nova conta bancária
 
-**URL**: https://lovable.dev/projects/55fa08f0-305a-4113-a59b-4963cc57883e
+🔐 Autenticação com número da conta e senha
 
-## How can I edit this code?
+📄 Consulta de extrato bancário
 
-There are several ways of editing your application.
+💸 Realização de transações (depósito e saque)
 
-**Use Lovable**
+📊 Visualização de ofertas de crédito
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/55fa08f0-305a-4113-a59b-4963cc57883e) and start prompting.
+📬 Gerenciamento de consentimentos Open Finance
 
-Changes made via Lovable will be committed automatically to this repo.
+⚙️ Integração com API BanrisulBackEnd
 
-**Use your preferred IDE**
+🛠️ Tecnologias Utilizadas
+React.js (v18) – Biblioteca principal para construção da UI
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+TypeScript – Tipagem estática para maior segurança no desenvolvimento
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Vite – Ferramenta moderna para build e desenvolvimento
 
-Follow these steps:
+TailwindCSS – Framework de utilitários CSS para estilização rápida
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Radix UI – Componentes acessíveis e estilizados
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+React Router DOM – Gerenciamento de rotas da aplicação
 
-# Step 3: Install the necessary dependencies.
-npm i
+Zod + React Hook Form – Validação de formulários
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+TanStack React Query – Cache e gerenciamento de requisições
 
-**Edit a file directly in GitHub**
+Axios – Cliente HTTP para comunicação com backend
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+📁 Estrutura de Pastas
+csharp
+Copiar
+Editar
+BanrisulFrontEnd/
+│
+├── public/                  # Arquivos públicos (favicon, robots.txt etc.)
+├── src/
+│   ├── components/          # Componentes reutilizáveis (UI, Layout, Loading)
+│   ├── contexts/            # Contexto global do Banrisul
+│   ├── hooks/               # Custom hooks (ex: mobile, toast)
+│   ├── lib/                 # Funções auxiliares
+│   ├── pages/               # Páginas da aplicação:
+│   │   ├── Index.tsx              # Tela inicial
+│   │   ├── CadastroConta.tsx      # Cadastro de nova conta
+│   │   ├── Consentimentos.tsx     # Gerenciar consentimento
+│   │   ├── Extrato.tsx            # Visualizar extrato bancário
+│   │   ├── ListagemContas.tsx    # Lista de contas
+│   │   ├── OfertasCredito.tsx    # Ofertas recomendadas
+│   │   └── Transacoes.tsx        # Depositar / Sacar
+│   └── services/           # Integração com API (banrisulApi.ts)
+├── index.html              # Página principal HTML
+├── tailwind.config.ts      # Configuração do TailwindCSS
+├── vite.config.ts          # Configuração do Vite
+📦 Dependências Principais
+Algumas bibliotecas utilizadas:
 
-**Use GitHub Codespaces**
+react, react-dom, react-router-dom
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+tailwindcss, clsx, tailwind-merge, tailwindcss-animate
 
-## What technologies are used for this project?
+@radix-ui/* – Acessibilidade e interatividade visual
 
-This project is built with:
+axios – Requisições HTTP
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+zod e react-hook-form – Validação e controle de formulários
 
-## How can I deploy this project?
+@tanstack/react-query – Cache inteligente de requisições
 
-Simply open [Lovable](https://lovable.dev/projects/55fa08f0-305a-4113-a59b-4963cc57883e) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+🔄 Integração com API
+A comunicação com o backend BanrisulBackEnd é feita via chamadas HTTP utilizando axios, com base nos seguintes endpoints:
 
-Yes, you can!
+POST /banrisul/contas – Criar conta
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+POST /banrisul/login – Autenticação
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+GET /banrisul/transacoes/:numeroConta – Extrato
+
+POST /banrisul/transacoes – Transação (depósito/saque)
+
+GET /banrisul/ofertas/recomendadas/:score – Ofertas de crédito
+
+POST /banrisul/open-finance/consentimento – Gerar consentimento
+
+GET /banrisul/open-finance/dados – Dados bancários com consentimento
