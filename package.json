@@ -24,10 +24,10 @@
     "start:banrisulfront": "cd Banrisul/BanrisulFrontEnd && npm run dev",
     "start:mercadopago": "cd MercadoPago/MercadoPagoBackEnd && npm run dev",
     "start-todos": "npm-run-all --parallel start:*",
-    "reset:itau": "cd Itau/ItauBackEnd/src/config/config.js && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
-    "reset:sicredi": "cd Sicredi/SicrediBackEnd/src/config/config.js && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
-    "reset:banrisul": "cd Banrisul/BanrisulBackEnd/src/config/config.js && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
-    "reset:mercadopago": "cd MercadoPago/MercadoPagoBackEnd/src/config/config.js && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "reset:itau": "cd Itau/ItauBackEnd && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "reset:sicredi": "cd Sicredi/SicrediBackEnd && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "reset:banrisul": "cd Banrisul/BanrisulBackEnd && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "reset:mercadopago": "cd MercadoPago/MercadoPagoBackEnd && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "reset-todos": "npm-run-all --parallel reset:*"
   }
 }
