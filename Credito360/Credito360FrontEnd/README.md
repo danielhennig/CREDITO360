@@ -1,73 +1,85 @@
-# Welcome to your Lovable project
 
-## Project info
+# 🌐 Crédito360FrontEnd – Dashboard Open Finance & Marketplace de Crédito
 
-**URL**: https://lovable.dev/projects/ca1d906b-7bcc-4af9-9d14-00945aee10bb
+Interface web do **Crédito360**, plataforma que agrega dados bancários de múltiplos bancos simulados
+(Itaú, Sicredi, Banrisul, Mercado Pago) e recomenda ofertas de crédito personalizadas.
 
-## How can I edit this code?
+> **Stack:** React 18 · TypeScript · Vite · TailwindCSS · Radix UI · TanStack React Query
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## ⚙️ Fluxo de Interação
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ca1d906b-7bcc-4af9-9d14-00945aee10bb) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```text
+Usuário → Login/Cadastro → Token JWT salvo (localStorage)
+       └─► Dashboard
+            ├── Conectar Bancos      (chama /connect/:banco no backend)
+            ├── Atualizar Score      (POST /atualizar-score)
+            ├── Listar Ofertas       (GET /ofertas/recomendadas/:cpf)
+            └── Extratos & Transações (GET /dados/:banco)
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## ✨ Funcionalidades Principais
 
-**Use GitHub Codespaces**
+- **Landing Page** com apresentação do Crédito360  
+- **Cadastro** e **Login** (JWT)  
+- **Dashboard** consolidado:
+  - Conectar / desconectar bancos (até 4 instituições)
+  - Visualizar saldo e transações em tempo‑real
+  - Forçar atualização de score
+  - Listar ofertas de crédito recomendadas
+- **Toasts** e **validadores** para feedback imediato de ações
+- **Tema responsivo** (mobile‑first) com TailwindCSS + Radix UI
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 🛠️ Principais Tecnologias & Bibliotecas
 
-This project is built with:
+| Categoria          | Pacotes chave                                                                                            |
+| ------------------ | --------------------------------------------------------------------------------------------------------- |
+| **UI**             | `react`, `react-dom`, `tailwindcss`, `lucide-react`, `@radix-ui/*`                                        |
+| **Roteamento**     | `react-router-dom`                                                                                        |
+| **Formulários**    | `react-hook-form`, `@hookform/resolvers`, `zod`                                                          |
+| **Data‑Fetching**  | `@tanstack/react-query`                                                                                  |
+| **Gráficos**       | `recharts`                                                                                               |
+| **Utilitários**    | `class-variance-authority`, `tailwind-merge`, `sonner` (toasts)                                          |
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 📁 Estrutura de Pastas
 
-Simply open [Lovable](https://lovable.dev/projects/ca1d906b-7bcc-4af9-9d14-00945aee10bb) and click on Share -> Publish.
+```
+Credito360FrontEnd/
+├── public/                 # assets estáticos
+├── src/
+│   ├── components/         # componentes reutilizáveis (UI, layout, gráficos)
+│   ├── contexts/           # contexto global (auth, banco conectado)
+│   ├── hooks/              # hooks customizados
+│   ├── lib/                # funções utilitárias
+│   ├── pages/              # páginas: Landing, Dashboard, ConectarBancos, Ofertas...
+│   └── services/           # chamadas REST para o backend (fetch/React Query)
+├── tailwind.config.ts
+├── vite.config.ts
+└── index.html
+```
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🔌 Integração com Backend
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+| Ação no Frontend          | Método / Rota Backend                              |
+| ------------------------- | -------------------------------------------------- |
+| Login                     | `POST /login`                                      |
+| Cadastro                  | `POST /register`                                   |
+| Conectar Banco            | `POST /connect/:banco`                             |
+| Obter Dados Bancários     | `GET /dados/:banco?numeroConta=...&senha=...`       |
+| Atualizar Score           | `POST /atualizar-score`                            |
+| Ofertas Recomendadas      | `GET /ofertas/recomendadas/:cpf`                   |
+
+Tokens JWT são enviados no header `Authorization: Bearer <token>`.
+
+---
+
