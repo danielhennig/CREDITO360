@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "open": "^10.1.2"
   },
   "scripts": {
     "install:backend": "cd Credito360/Credito360BackEnd && npm install",
@@ -14,7 +15,6 @@
     "install:banrisulfront": "cd Banrisul/BanrisulFrontEnd && npm install",
     "install:mercadopago": "cd MercadoPago/MercadoPagoBackEnd && npm install",
     "install-todos": "npm-run-all --parallel install:*",
-
     "start:backend": "cd Credito360/Credito360BackEnd && npm run dev",
     "start:backendia": "cd Credito360/Credito360BackEnd && npm run serve",
     "start:frontend": "cd Credito360/Credito360FrontEnd && npm run dev",
@@ -24,7 +24,6 @@
     "start:banrisulfront": "cd Banrisul/BanrisulFrontEnd && npm run dev",
     "start:mercadopago": "cd MercadoPago/MercadoPagoBackEnd && npm run dev",
     "start-todos": "npm-run-all --parallel start:*",
-
     "reset:itau": "cd Bancos/Itaú/ItauBackEnd && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "reset:sicredi": "cd Bancos/Sicredi/SicrediBackEnd && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "reset:banrisul": "cd Bancos/Banrisul/BanrisulBackEnd && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
