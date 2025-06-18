@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true
         },
         numeroConta: {
-            type: DataTypes.STRING,     // Correto: é uma string visível (ex: "123456")
+            type: DataTypes.STRING,     
             allowNull: false
         },
         tipo: {
@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         contaId: {
-            type: DataTypes.UUID,       // Chave estrangeira
+            type: DataTypes.UUID,      
             allowNull: false
         }
     }, {

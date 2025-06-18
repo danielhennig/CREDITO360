@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-// ===== Funções auxiliares de datas e pesos =====
+
 function parseISODate(str) {
     return new Date(str + 'T00:00:00Z');
 }
@@ -15,7 +15,7 @@ function recencyWeight(txDate, referenceDate, windowDays = 180) {
     return Math.max(0, Math.min(w, 1));
 }
 
-// ===== Normalização e extração de features =====
+
 function convertTransactions(transactions) {
     return transactions.map(tx => {
         const dep = tx.tipo === 'deposito' ? tx.valor : 0;
@@ -28,7 +28,7 @@ function convertTransactions(transactions) {
     });
 }
 
-// ===== Chamada ao servidor IA =====
+
 async function scoreTransactions(transactions) {
     const formattedTx = convertTransactions(transactions);
 

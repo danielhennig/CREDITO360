@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Rotas
+
 const contaRoutes = require('./src/routes/contaRoutes');
 const transacaoRoutes = require('./src/routes/transacaoRoutes');
 const ofertaRoutes = require('./src/routes/ofertaRoutes');

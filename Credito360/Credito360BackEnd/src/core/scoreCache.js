@@ -1,3 +1,3 @@
-const conexoesCliente = {}; // chave: CPF, valor: { bancosConectados: { itau: numeroConta, sicredi: ... } }
+const conexoesCliente = {}; 
 
 module.exports = conexoesCliente;

@@ -5,7 +5,7 @@ module.exports = {
     async criarTransacao(req, res) {
         try {
             const { tipo, valor } = req.body;
-            const conta = req.conta; // injetado pelo middleware verificarNumeroContaExiste
+            const conta = req.conta; 
 
             if (tipo === 'saque' && conta.saldo < valor) {
                 return res.status(400).json({ erro: 'Saldo insuficiente' });

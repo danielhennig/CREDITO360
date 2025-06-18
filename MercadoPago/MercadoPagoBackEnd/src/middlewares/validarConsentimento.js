@@ -14,7 +14,7 @@ module.exports = async (req, res, next) => {
         contaId,
         autorizado: true,
         validade: {
-          [Op.gt]: new Date()  // verifica se ainda está válido
+          [Op.gt]: new Date() 
         }
       }
     });

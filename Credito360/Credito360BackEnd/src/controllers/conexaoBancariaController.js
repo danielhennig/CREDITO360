@@ -19,7 +19,6 @@ async function processarConexao(service, nomeBanco, req, res) {
             return res.status(400).json({ erro: 'CPF não encontrado nos dados da conta.' });
         }
 
-        // Marca o banco como conectado para esse CPF
         if (!conexoesCliente[cpf]) {
             conexoesCliente[cpf] = { bancosConectados: {} };
         }

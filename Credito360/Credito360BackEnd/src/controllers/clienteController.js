@@ -7,21 +7,17 @@ module.exports = {
         try {
             const { nome, cpf, email, senha } = req.body;
 
-            // Verifica campos obrigatórios (poderia estar em middleware no futuro)
             if (!nome || !cpf || !email || !senha) {
                 return res.status(400).json({ erro: 'Campos obrigatórios não preenchidos' });
             }
 
-            // Verifica se já existe cliente com o mesmo CPF ou Email
             const existente = await Cliente.findOne({ where: { cpf } });
             if (existente) {
                 return res.status(409).json({ erro: 'CPF já cadastrado' });
             }
 
-            // Criptografa a senha
             const senhaCriptografada = await bcrypt.hash(senha, 10);
 
-            // Cria cliente
             const novoCliente = await Cliente.create({
                 id: uuidv4(),
                 nome,
@@ -30,7 +26,6 @@ module.exports = {
                 senha: senhaCriptografada
             });
 
-            // Remove a senha da resposta
             const clienteSemSenha = { ...novoCliente.toJSON() };
             delete clienteSemSenha.senha;
 
@@ -41,7 +36,6 @@ module.exports = {
     },
     async obterPerfil(req, res) {
         try {
-            // 🔁 Aqui usamos o email vindo do token (extraído no authMiddleware)
             const { email } = req.user;
 
             if (!email) {

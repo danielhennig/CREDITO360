@@ -5,7 +5,7 @@ const controller = require('../controllers/consentimentoController');
 const validarCampos = require('../middlewares/validarCamposObrigatorios');
 const authMiddleware = require('../middlewares/authMiddleware');
 
-// ✅ Criar consentimento com validação de campos
+
 router.post(
   '/',
 

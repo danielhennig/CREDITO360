@@ -13,7 +13,7 @@ module.exports = async (req, res, next) => {
         return res.status(404).json({ erro: 'Conta com esse número não encontrada.' });
     }
 
-    req.conta = conta; // opcional, se quiser usar no controller
+    req.conta = conta; 
 
     next();
 };

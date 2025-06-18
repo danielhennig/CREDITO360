@@ -24,7 +24,6 @@ async function obterExtrato(numeroConta) {
     };
 }
 
-// Agora o score será calculado pela IA com base nas transações
 async function calcularScore(transacoes) {
     return await scoreTransactions(transacoes);
 }

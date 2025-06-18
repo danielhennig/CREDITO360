@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const { v4: uuidv4 } = require('uuid');
 
 const gerarNumeroConta = () => {
-    return Math.floor(100000 + Math.random() * 900000).toString(); // 6 dígitos
+    return Math.floor(100000 + Math.random() * 900000).toString();
 };
 
 module.exports = {
@@ -23,7 +23,7 @@ module.exports = {
                 numeroConta
             });
 
-            // Remover senha da resposta
+           
             const contaSemSenha = { ...novaConta.toJSON() };
             delete contaSemSenha.senha;
 
@@ -35,7 +35,7 @@ module.exports = {
     async listarContas(req, res) {
         try {
             const contas = await Conta.findAll({
-                attributes: { exclude: ['senha'] } // oculta a senha
+                attributes: { exclude: ['senha'] } 
             });
 
             return res.status(200).json(contas);

@@ -4,7 +4,7 @@ const { v4: uuidv4 } = require('uuid');
 module.exports = {
   async criarConsentimento(req, res) {
     try {
-      const contaId = req.usuario?.contaId; // vem do JWT
+      const contaId = req.usuario?.contaId; 
       const { escopo, validade } = req.body;
 
       if (!contaId) {

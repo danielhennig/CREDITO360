@@ -6,7 +6,7 @@ const validarCampos = require('../middlewares/validarCamposObrigatorios');
 const verificarNumeroContaExiste = require('../middlewares/verificarNumeroContaExiste');
 const authMiddleware = require('../middlewares/authMiddleware');
 
-// ✅ Criar transação (depósito ou saque)
+
 router.post(
     '/',
 
@@ -15,7 +15,7 @@ router.post(
     transacaoController.criarTransacao
 );
 
-// ✅ Listar transações por conta (extrato)
+
 router.get(
     '/:numeroConta',
 

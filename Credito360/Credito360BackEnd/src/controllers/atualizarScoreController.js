@@ -56,7 +56,7 @@ async function atualizarScore(req, res) {
 
     resultado.scoreTotal = contador ? Math.round(somaScores / contador) : 0;
 
-    // === SEGUNDO LOOP: ofertas com scoreTotal ===
+    
     for (const item of resultado.bancos) {
         const chave = normalizarNomeBanco(item.banco);
         const service = servicos[chave];

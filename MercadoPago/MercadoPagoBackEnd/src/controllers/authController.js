@@ -19,7 +19,7 @@ module.exports = {
 
             const token = jwt.sign(
                 {
-                    contaId: conta.id,        // obrigatório para validar consentimento
+                    contaId: conta.id,        
                     numeroConta: conta.numeroConta,
                     email: conta.email
                 },
