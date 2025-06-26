@@ -4,11 +4,18 @@ npm run reset-todos       # Reseta todos os bancos com migrations + seeds
 
 
 
-# 1 Construir imagens na primeira vez
+# 1. Construa as imagens Docker
 docker compose build
 
-# 2 Subir tudo
+# 2. Suba todos os serviços (APIs + Frontends)
 docker compose up -d
+
+# 3. (Opcional mas recomendado) Resete todos os bancos com migrations + seeds
+npm run reset-todos
+
+# 4. Para desligar o docker
+docker compose down
+docker compose down -v (exclui os dados)
 
 
 
