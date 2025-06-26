@@ -79,4 +79,4 @@ A autenticação é feita com JWT. Acesso aos dados bancários exige consentimen
 
 ## 🧠 Observações
 
-Este projeto é parte de uma simulação educacional integrada ao sistema **Crédito360**, com foco em Open Finance e interoperabilidade entre instituições financeiras.
+Este projeto é parte de uma simulação integrada ao sistema **Crédito360**, com foco em Open Finance e interoperabilidade entre instituições financeiras.
