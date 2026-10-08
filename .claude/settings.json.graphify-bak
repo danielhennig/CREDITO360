@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "graphify hook-guard search",
+            "command": "C:/Users/Daniel/AppData/Local/Programs/Python/Python313/Scripts/graphify.EXE hook-guard search",
             "timeout": 10
           }
         ]
@@ -16,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "graphify hook-guard read",
+            "command": "C:/Users/Daniel/AppData/Local/Programs/Python/Python313/Scripts/graphify.EXE hook-guard read",
             "timeout": 10
           }
         ]
