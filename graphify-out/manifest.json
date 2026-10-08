@@ -1,0 +1,1994 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1791477634.6497324,
+    "seen": 1791478250.6594105,
+    "ast_hash": "3ac995fbf93552a991ecab9b63f776aa",
+    "semantic_hash": "3ac995fbf93552a991ecab9b63f776aa"
+  },
+  "Banrisul/BanrisulBackEnd/app.js": {
+    "mtime": 1791475944.0378811,
+    "seen": 1791478250.659414,
+    "ast_hash": "70ece37ddf61e0843368bc5f7c5648ed",
+    "semantic_hash": "70ece37ddf61e0843368bc5f7c5648ed"
+  },
+  "Banrisul/BanrisulBackEnd/package.json": {
+    "mtime": 1791475944.0398808,
+    "seen": 1791478250.6594155,
+    "ast_hash": "c1b32078a3930ee140f2fedd9a3475be",
+    "semantic_hash": "c1b32078a3930ee140f2fedd9a3475be"
+  },
+  "Banrisul/BanrisulBackEnd/src/config/config.js": {
+    "mtime": 1791475944.0408812,
+    "seen": 1791478250.6594167,
+    "ast_hash": "9fe12d77956e598cf2b9669240300651",
+    "semantic_hash": "9fe12d77956e598cf2b9669240300651"
+  },
+  "Banrisul/BanrisulBackEnd/src/controllers/authController.js": {
+    "mtime": 1791475944.0408812,
+    "seen": 1791478250.6594172,
+    "ast_hash": "62c1ff6a75748d3d166e69da7dc66e3e",
+    "semantic_hash": "62c1ff6a75748d3d166e69da7dc66e3e"
+  },
+  "Banrisul/BanrisulBackEnd/src/controllers/consentimentoController.js": {
+    "mtime": 1791475944.0408812,
+    "seen": 1791478250.6594179,
+    "ast_hash": "17e2a3cd20d1d873ef910782a4723961",
+    "semantic_hash": "17e2a3cd20d1d873ef910782a4723961"
+  },
+  "Banrisul/BanrisulBackEnd/src/controllers/contaController.js": {
+    "mtime": 1791475944.0418806,
+    "seen": 1791478250.6594186,
+    "ast_hash": "f2a972ad6d472a9dc257574513c5b600",
+    "semantic_hash": "f2a972ad6d472a9dc257574513c5b600"
+  },
+  "Banrisul/BanrisulBackEnd/src/controllers/ofertaController.js": {
+    "mtime": 1791475944.0418806,
+    "seen": 1791478250.659419,
+    "ast_hash": "4fd444cafb025584ae640c57da02086a",
+    "semantic_hash": "4fd444cafb025584ae640c57da02086a"
+  },
+  "Banrisul/BanrisulBackEnd/src/controllers/openFinanceController.js": {
+    "mtime": 1791475944.0418806,
+    "seen": 1791478250.6594195,
+    "ast_hash": "8e96ffb1f429922fd947ad4d00a43622",
+    "semantic_hash": "8e96ffb1f429922fd947ad4d00a43622"
+  },
+  "Banrisul/BanrisulBackEnd/src/controllers/transacaoController.js": {
+    "mtime": 1791475944.0418806,
+    "seen": 1791478250.6594205,
+    "ast_hash": "619a2d7a06d87bf0056769f6c21ed655",
+    "semantic_hash": "619a2d7a06d87bf0056769f6c21ed655"
+  },
+  "Banrisul/BanrisulBackEnd/src/middlewares/authMiddleware.js": {
+    "mtime": 1791475944.042881,
+    "seen": 1791478250.6594207,
+    "ast_hash": "d320843def906a762da9ee065ca0c3e5",
+    "semantic_hash": "d320843def906a762da9ee065ca0c3e5"
+  },
+  "Banrisul/BanrisulBackEnd/src/middlewares/validarCamposObrigatorios.js": {
+    "mtime": 1791475944.042881,
+    "seen": 1791478250.6594217,
+    "ast_hash": "bffc20b05a398c394860472acd8f2002",
+    "semantic_hash": "bffc20b05a398c394860472acd8f2002"
+  },
+  "Banrisul/BanrisulBackEnd/src/middlewares/validarConsentimento.js": {
+    "mtime": 1791475944.0433843,
+    "seen": 1791478250.6594222,
+    "ast_hash": "b5b08e389b2c4c69107136e7e27584e7",
+    "semantic_hash": "b5b08e389b2c4c69107136e7e27584e7"
+  },
+  "Banrisul/BanrisulBackEnd/src/middlewares/verificarNumeroContaExiste.js": {
+    "mtime": 1791475944.0433843,
+    "seen": 1791478250.6594226,
+    "ast_hash": "a751c8f5a978621bf0183b44bd661696",
+    "semantic_hash": "a751c8f5a978621bf0183b44bd661696"
+  },
+  "Banrisul/BanrisulBackEnd/src/migrations/20250531012157-enable-uuid-ossp.js": {
+    "mtime": 1791475944.0433843,
+    "seen": 1791478250.659423,
+    "ast_hash": "e3e1f1378427cecc25b81a294403cf02",
+    "semantic_hash": "e3e1f1378427cecc25b81a294403cf02"
+  },
+  "Banrisul/BanrisulBackEnd/src/migrations/20250531031358-create-conta.js": {
+    "mtime": 1791475944.0443885,
+    "seen": 1791478250.659424,
+    "ast_hash": "337d2cde9545657f0b43cfcf54c001ed",
+    "semantic_hash": "337d2cde9545657f0b43cfcf54c001ed"
+  },
+  "Banrisul/BanrisulBackEnd/src/migrations/20250531043913-create-transacao.js": {
+    "mtime": 1791475944.0443885,
+    "seen": 1791478250.6594245,
+    "ast_hash": "f0ff09672ad95b785dc0a9d8c0f37109",
+    "semantic_hash": "f0ff09672ad95b785dc0a9d8c0f37109"
+  },
+  "Banrisul/BanrisulBackEnd/src/migrations/20250531050307-create-oferta.js": {
+    "mtime": 1791475944.0443885,
+    "seen": 1791478250.659425,
+    "ast_hash": "2dd6c1f9d296261ab3fcd69c342b925c",
+    "semantic_hash": "2dd6c1f9d296261ab3fcd69c342b925c"
+  },
+  "Banrisul/BanrisulBackEnd/src/migrations/20250604042031-create-consentimento.js": {
+    "mtime": 1791475944.0453923,
+    "seen": 1791478250.6594255,
+    "ast_hash": "1cb1b59a14b5a4abb607e14806cc1d65",
+    "semantic_hash": "1cb1b59a14b5a4abb607e14806cc1d65"
+  },
+  "Banrisul/BanrisulBackEnd/src/models/Consentimento.js": {
+    "mtime": 1791475944.0453923,
+    "seen": 1791478250.659426,
+    "ast_hash": "8736ba8ef2ec4768f6f3b566f0b81d8f",
+    "semantic_hash": "8736ba8ef2ec4768f6f3b566f0b81d8f"
+  },
+  "Banrisul/BanrisulBackEnd/src/models/Conta.js": {
+    "mtime": 1791475944.0453923,
+    "seen": 1791478250.659427,
+    "ast_hash": "9038db79979892815ee0aef8fb16ff67",
+    "semantic_hash": "9038db79979892815ee0aef8fb16ff67"
+  },
+  "Banrisul/BanrisulBackEnd/src/models/Oferta.js": {
+    "mtime": 1791475944.0453923,
+    "seen": 1791478250.6594274,
+    "ast_hash": "670b3a4270184e1b98b7c45478b830ea",
+    "semantic_hash": "670b3a4270184e1b98b7c45478b830ea"
+  },
+  "Banrisul/BanrisulBackEnd/src/models/Transacao.js": {
+    "mtime": 1791475944.0463922,
+    "seen": 1791478250.6594281,
+    "ast_hash": "b5e4cd8251fc6bb2562be60a38baf455",
+    "semantic_hash": "b5e4cd8251fc6bb2562be60a38baf455"
+  },
+  "Banrisul/BanrisulBackEnd/src/models/index.js": {
+    "mtime": 1791475944.0463922,
+    "seen": 1791478250.6594286,
+    "ast_hash": "b1cb64901fd625040a3eafa4ce4b2e7a",
+    "semantic_hash": "b1cb64901fd625040a3eafa4ce4b2e7a"
+  },
+  "Banrisul/BanrisulBackEnd/src/routes/authRoutes.js": {
+    "mtime": 1791475944.0463922,
+    "seen": 1791478250.659429,
+    "ast_hash": "51ea39eb747e949394c837c7320d5686",
+    "semantic_hash": "51ea39eb747e949394c837c7320d5686"
+  },
+  "Banrisul/BanrisulBackEnd/src/routes/consentimentoRoutes.js": {
+    "mtime": 1791475944.0473928,
+    "seen": 1791478250.6594298,
+    "ast_hash": "ae89a3c96f34919827e9f2d9d5a06af5",
+    "semantic_hash": "ae89a3c96f34919827e9f2d9d5a06af5"
+  },
+  "Banrisul/BanrisulBackEnd/src/routes/contaRoutes.js": {
+    "mtime": 1791475944.0473928,
+    "seen": 1791478250.6594305,
+    "ast_hash": "d42f1618b58097320a6c90e062bc7c96",
+    "semantic_hash": "d42f1618b58097320a6c90e062bc7c96"
+  },
+  "Banrisul/BanrisulBackEnd/src/routes/ofertaRoutes.js": {
+    "mtime": 1791475944.0473928,
+    "seen": 1791478250.659431,
+    "ast_hash": "47fde5f2ae5da264a2e7b96840cff158",
+    "semantic_hash": "47fde5f2ae5da264a2e7b96840cff158"
+  },
+  "Banrisul/BanrisulBackEnd/src/routes/openFinanceRoutes.js": {
+    "mtime": 1791475944.0473928,
+    "seen": 1791478250.6594315,
+    "ast_hash": "9007fe05efc27961f704e3c953051372",
+    "semantic_hash": "9007fe05efc27961f704e3c953051372"
+  },
+  "Banrisul/BanrisulBackEnd/src/routes/transacaoRoutes.js": {
+    "mtime": 1791475944.0483942,
+    "seen": 1791478250.659432,
+    "ast_hash": "b6f984b4fd1563d28834b11f36941dfb",
+    "semantic_hash": "b6f984b4fd1563d28834b11f36941dfb"
+  },
+  "Banrisul/BanrisulBackEnd/src/seeders/20250604035525-seed-contas.js": {
+    "mtime": 1791475944.0483942,
+    "seen": 1791478250.6594326,
+    "ast_hash": "282b2e46c8b0aaa014af3a45eaa6af12",
+    "semantic_hash": "282b2e46c8b0aaa014af3a45eaa6af12"
+  },
+  "Banrisul/BanrisulBackEnd/src/seeders/20250604035702-seed-ofertas.js": {
+    "mtime": 1791475944.0483942,
+    "seen": 1791478250.6594331,
+    "ast_hash": "c67336810b82a1a7375b7df706c0cb12",
+    "semantic_hash": "c67336810b82a1a7375b7df706c0cb12"
+  },
+  "Banrisul/BanrisulBackEnd/src/seeders/20250604040042-seed-transacoes.js": {
+    "mtime": 1791475944.0493937,
+    "seen": 1791478250.6594334,
+    "ast_hash": "d392487fea7e939544e4cc28e353f4eb",
+    "semantic_hash": "d392487fea7e939544e4cc28e353f4eb"
+  },
+  "Banrisul/BanrisulFrontEnd/components.json": {
+    "mtime": 1791475944.0503922,
+    "seen": 1791478250.6594343,
+    "ast_hash": "bfe8fda7814d7c5a44aff2aef2dd86ec",
+    "semantic_hash": "bfe8fda7814d7c5a44aff2aef2dd86ec"
+  },
+  "Banrisul/BanrisulFrontEnd/eslint.config.js": {
+    "mtime": 1791475944.0513923,
+    "seen": 1791478250.6594348,
+    "ast_hash": "2e240281bad56fce6a86cb0e49590ae9",
+    "semantic_hash": "2e240281bad56fce6a86cb0e49590ae9"
+  },
+  "Banrisul/BanrisulFrontEnd/package.json": {
+    "mtime": 1791475944.0528977,
+    "seen": 1791478250.6594353,
+    "ast_hash": "45270cb4c5b32916fd42c0c251fa964a",
+    "semantic_hash": "45270cb4c5b32916fd42c0c251fa964a"
+  },
+  "Banrisul/BanrisulFrontEnd/postcss.config.js": {
+    "mtime": 1791475944.0528977,
+    "seen": 1791478250.6594357,
+    "ast_hash": "5b84f4567208c7c747079c0477373231",
+    "semantic_hash": "5b84f4567208c7c747079c0477373231"
+  },
+  "Banrisul/BanrisulFrontEnd/src/App.tsx": {
+    "mtime": 1791475944.0579057,
+    "seen": 1791478250.6594362,
+    "ast_hash": "73a67a9c7fe60a724c045c6f4864cd2b",
+    "semantic_hash": "73a67a9c7fe60a724c045c6f4864cd2b"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/Layout.tsx": {
+    "mtime": 1791475944.0591497,
+    "seen": 1791478250.6594367,
+    "ast_hash": "40a29d99e68acbde93ec1395c756f6a7",
+    "semantic_hash": "40a29d99e68acbde93ec1395c756f6a7"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/Loading.tsx": {
+    "mtime": 1791475944.0591497,
+    "seen": 1791478250.6594374,
+    "ast_hash": "e45803e7e98420e9188afeb67c7be481",
+    "semantic_hash": "e45803e7e98420e9188afeb67c7be481"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/accordion.tsx": {
+    "mtime": 1791475944.059975,
+    "seen": 1791478250.6594381,
+    "ast_hash": "1a18877296af9e613340447038cb8cb1",
+    "semantic_hash": "1a18877296af9e613340447038cb8cb1"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/alert-dialog.tsx": {
+    "mtime": 1791475944.059975,
+    "seen": 1791478250.6594386,
+    "ast_hash": "18a643a884fd4f2832ef3abe20b35eb6",
+    "semantic_hash": "18a643a884fd4f2832ef3abe20b35eb6"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/alert.tsx": {
+    "mtime": 1791475944.059975,
+    "seen": 1791478250.659439,
+    "ast_hash": "59e3895ea793fed08d8d9f0f83ad13df",
+    "semantic_hash": "59e3895ea793fed08d8d9f0f83ad13df"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/aspect-ratio.tsx": {
+    "mtime": 1791475944.059975,
+    "seen": 1791478250.65944,
+    "ast_hash": "114d53f29a18d0e8b5e48f5ff3811e15",
+    "semantic_hash": "114d53f29a18d0e8b5e48f5ff3811e15"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/avatar.tsx": {
+    "mtime": 1791475944.059975,
+    "seen": 1791478250.6594408,
+    "ast_hash": "8f44230e5058b7ace8269c971da7189e",
+    "semantic_hash": "8f44230e5058b7ace8269c971da7189e"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/badge.tsx": {
+    "mtime": 1791475944.0613952,
+    "seen": 1791478250.6594412,
+    "ast_hash": "2ba8b44541085f725b216267f9feb892",
+    "semantic_hash": "2ba8b44541085f725b216267f9feb892"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/breadcrumb.tsx": {
+    "mtime": 1791475944.0613952,
+    "seen": 1791478250.6594417,
+    "ast_hash": "9fca9864de9b9b15e088c2a237c8594b",
+    "semantic_hash": "9fca9864de9b9b15e088c2a237c8594b"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/button.tsx": {
+    "mtime": 1791475944.0613952,
+    "seen": 1791478250.6594422,
+    "ast_hash": "55bae00127c054032e205b63a62802db",
+    "semantic_hash": "55bae00127c054032e205b63a62802db"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/calendar.tsx": {
+    "mtime": 1791475944.0613952,
+    "seen": 1791478250.6594427,
+    "ast_hash": "476dc9f9aa1ea81ac3dd0138011ac442",
+    "semantic_hash": "476dc9f9aa1ea81ac3dd0138011ac442"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/card.tsx": {
+    "mtime": 1791475944.0613952,
+    "seen": 1791478250.6594431,
+    "ast_hash": "aed5be3990f288c539122080ef55490c",
+    "semantic_hash": "aed5be3990f288c539122080ef55490c"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/carousel.tsx": {
+    "mtime": 1791475944.0613952,
+    "seen": 1791478250.6594439,
+    "ast_hash": "14a5dcc894d9bc2b7730372507ed1b43",
+    "semantic_hash": "14a5dcc894d9bc2b7730372507ed1b43"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/chart.tsx": {
+    "mtime": 1791475944.0628984,
+    "seen": 1791478250.6594446,
+    "ast_hash": "145e8ee7e39401d9b5d59f0e9f05318f",
+    "semantic_hash": "145e8ee7e39401d9b5d59f0e9f05318f"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/checkbox.tsx": {
+    "mtime": 1791475944.0628984,
+    "seen": 1791478250.659445,
+    "ast_hash": "e8850db2b4357ce03822d84c54b72633",
+    "semantic_hash": "e8850db2b4357ce03822d84c54b72633"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/collapsible.tsx": {
+    "mtime": 1791475944.0628984,
+    "seen": 1791478250.6594455,
+    "ast_hash": "1048c23a2aadd5fdbbde0b04ec61e5cf",
+    "semantic_hash": "1048c23a2aadd5fdbbde0b04ec61e5cf"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/command.tsx": {
+    "mtime": 1791475944.063903,
+    "seen": 1791478250.659446,
+    "ast_hash": "ddaf5f8eb7775107668d1a8175ea32f8",
+    "semantic_hash": "ddaf5f8eb7775107668d1a8175ea32f8"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/context-menu.tsx": {
+    "mtime": 1791475944.063903,
+    "seen": 1791478250.6594465,
+    "ast_hash": "45f2a0aa025bab9b8f9965b24a73b970",
+    "semantic_hash": "45f2a0aa025bab9b8f9965b24a73b970"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/dialog.tsx": {
+    "mtime": 1791475944.063903,
+    "seen": 1791478250.659447,
+    "ast_hash": "3d8d7b8910a4fc37afd0cf021e16edde",
+    "semantic_hash": "3d8d7b8910a4fc37afd0cf021e16edde"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/drawer.tsx": {
+    "mtime": 1791475944.063903,
+    "seen": 1791478250.6594477,
+    "ast_hash": "2a1e7b21cfd5c0043e6abc45a9117d4e",
+    "semantic_hash": "2a1e7b21cfd5c0043e6abc45a9117d4e"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/dropdown-menu.tsx": {
+    "mtime": 1791475944.064903,
+    "seen": 1791478250.6594481,
+    "ast_hash": "feacc91c0a5b8640b6f5cc8a98699c50",
+    "semantic_hash": "feacc91c0a5b8640b6f5cc8a98699c50"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/form.tsx": {
+    "mtime": 1791475944.064903,
+    "seen": 1791478250.6594486,
+    "ast_hash": "d6d30c3aae6f6d8d6299d67745504b48",
+    "semantic_hash": "d6d30c3aae6f6d8d6299d67745504b48"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/hover-card.tsx": {
+    "mtime": 1791475944.064903,
+    "seen": 1791478250.659449,
+    "ast_hash": "d7a103b77cc23f719887c6c90abef8a4",
+    "semantic_hash": "d7a103b77cc23f719887c6c90abef8a4"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/input-otp.tsx": {
+    "mtime": 1791475944.065903,
+    "seen": 1791478250.6594498,
+    "ast_hash": "feb9e193d5c6666a5682df9fbba1536b",
+    "semantic_hash": "feb9e193d5c6666a5682df9fbba1536b"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/input.tsx": {
+    "mtime": 1791475944.065903,
+    "seen": 1791478250.6594503,
+    "ast_hash": "f5c3f6115f14eb06180e98b0e302bc00",
+    "semantic_hash": "f5c3f6115f14eb06180e98b0e302bc00"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/label.tsx": {
+    "mtime": 1791475944.065903,
+    "seen": 1791478250.6594508,
+    "ast_hash": "99b8b7244860ecba9ce05f5a644e0360",
+    "semantic_hash": "99b8b7244860ecba9ce05f5a644e0360"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/menubar.tsx": {
+    "mtime": 1791475944.065903,
+    "seen": 1791478250.6594515,
+    "ast_hash": "791b0aa130a5be6588b3710a5ab704dd",
+    "semantic_hash": "791b0aa130a5be6588b3710a5ab704dd"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/navigation-menu.tsx": {
+    "mtime": 1791475944.0669029,
+    "seen": 1791478250.659452,
+    "ast_hash": "595bbede1d5900b44f8f101f40b51ae2",
+    "semantic_hash": "595bbede1d5900b44f8f101f40b51ae2"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/pagination.tsx": {
+    "mtime": 1791475944.0673976,
+    "seen": 1791478250.6594524,
+    "ast_hash": "fbe4e3289596434c7135c536a71887d1",
+    "semantic_hash": "fbe4e3289596434c7135c536a71887d1"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/popover.tsx": {
+    "mtime": 1791475944.0673976,
+    "seen": 1791478250.659453,
+    "ast_hash": "686fa6dc4c8e3f0e5c0e542b2a62ec4f",
+    "semantic_hash": "686fa6dc4c8e3f0e5c0e542b2a62ec4f"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/progress.tsx": {
+    "mtime": 1791475944.0673976,
+    "seen": 1791478250.6594534,
+    "ast_hash": "7a84c9ee8e9cd63771d4b472704d8d80",
+    "semantic_hash": "7a84c9ee8e9cd63771d4b472704d8d80"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/radio-group.tsx": {
+    "mtime": 1791475944.0684047,
+    "seen": 1791478250.6594539,
+    "ast_hash": "e59c6e8ca6130d694a2cae82a83cb8dc",
+    "semantic_hash": "e59c6e8ca6130d694a2cae82a83cb8dc"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/resizable.tsx": {
+    "mtime": 1791475944.0684047,
+    "seen": 1791478250.6594543,
+    "ast_hash": "a2f25b7becb25ae05252b81ca564bc5e",
+    "semantic_hash": "a2f25b7becb25ae05252b81ca564bc5e"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/scroll-area.tsx": {
+    "mtime": 1791475944.0684047,
+    "seen": 1791478250.659455,
+    "ast_hash": "6399ea030114b4a772f03f7dae127708",
+    "semantic_hash": "6399ea030114b4a772f03f7dae127708"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/select.tsx": {
+    "mtime": 1791475944.0684047,
+    "seen": 1791478250.6594555,
+    "ast_hash": "d5bc9af6e00c50edda84c80201516bd0",
+    "semantic_hash": "d5bc9af6e00c50edda84c80201516bd0"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/separator.tsx": {
+    "mtime": 1791475944.069403,
+    "seen": 1791478250.659456,
+    "ast_hash": "14b352d106f7c90830cea0ce57cdbde5",
+    "semantic_hash": "14b352d106f7c90830cea0ce57cdbde5"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/sheet.tsx": {
+    "mtime": 1791475944.069403,
+    "seen": 1791478250.6594565,
+    "ast_hash": "2e1504ca5868ca649a2e79fc0891057e",
+    "semantic_hash": "2e1504ca5868ca649a2e79fc0891057e"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/sidebar.tsx": {
+    "mtime": 1791475944.069403,
+    "seen": 1791478250.6594572,
+    "ast_hash": "1a26aa46e0801e649150dc50e3851bfe",
+    "semantic_hash": "1a26aa46e0801e649150dc50e3851bfe"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/skeleton.tsx": {
+    "mtime": 1791475944.0704045,
+    "seen": 1791478250.6594577,
+    "ast_hash": "0166abaa35206d438bd5ac705fb5dfb7",
+    "semantic_hash": "0166abaa35206d438bd5ac705fb5dfb7"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/slider.tsx": {
+    "mtime": 1791475944.0704045,
+    "seen": 1791478250.6594584,
+    "ast_hash": "e8f00aaf3fa17aeaab4f63145045be78",
+    "semantic_hash": "e8f00aaf3fa17aeaab4f63145045be78"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/sonner.tsx": {
+    "mtime": 1791475944.0704045,
+    "seen": 1791478250.6594589,
+    "ast_hash": "86a425e27fb4e58a48d9cfb6868fb715",
+    "semantic_hash": "86a425e27fb4e58a48d9cfb6868fb715"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/switch.tsx": {
+    "mtime": 1791475944.0704045,
+    "seen": 1791478250.6594594,
+    "ast_hash": "c86b3514e573211535c13444639bcc30",
+    "semantic_hash": "c86b3514e573211535c13444639bcc30"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/table.tsx": {
+    "mtime": 1791475944.0714042,
+    "seen": 1791478250.6594598,
+    "ast_hash": "554e91a3c4302c898342d712f80c3718",
+    "semantic_hash": "554e91a3c4302c898342d712f80c3718"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/tabs.tsx": {
+    "mtime": 1791475944.0714042,
+    "seen": 1791478250.6594605,
+    "ast_hash": "3e664ca1ea5a9fbedaba0c2a4c0ca2d2",
+    "semantic_hash": "3e664ca1ea5a9fbedaba0c2a4c0ca2d2"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/textarea.tsx": {
+    "mtime": 1791475944.0714042,
+    "seen": 1791478250.659461,
+    "ast_hash": "31f5d6d52ea14c1411296ee63003e4d7",
+    "semantic_hash": "31f5d6d52ea14c1411296ee63003e4d7"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/toast.tsx": {
+    "mtime": 1791475944.0714042,
+    "seen": 1791478250.6594617,
+    "ast_hash": "dbe9a151d339d621290dd6b42406e5fe",
+    "semantic_hash": "dbe9a151d339d621290dd6b42406e5fe"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/toaster.tsx": {
+    "mtime": 1791475944.0714042,
+    "seen": 1791478250.6594622,
+    "ast_hash": "daf7b04904d77303dd96a17236e24fbb",
+    "semantic_hash": "daf7b04904d77303dd96a17236e24fbb"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/toggle-group.tsx": {
+    "mtime": 1791475944.0729108,
+    "seen": 1791478250.6594627,
+    "ast_hash": "9cdf37fe38d53d66fd4c7131599fd6f1",
+    "semantic_hash": "9cdf37fe38d53d66fd4c7131599fd6f1"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/toggle.tsx": {
+    "mtime": 1791475944.0729108,
+    "seen": 1791478250.6594636,
+    "ast_hash": "3914f58aeec727c94dfb13b6a25487c1",
+    "semantic_hash": "3914f58aeec727c94dfb13b6a25487c1"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/tooltip.tsx": {
+    "mtime": 1791475944.0729108,
+    "seen": 1791478250.6594641,
+    "ast_hash": "57dbf3a262604092e7b52ffe1b715c5c",
+    "semantic_hash": "57dbf3a262604092e7b52ffe1b715c5c"
+  },
+  "Banrisul/BanrisulFrontEnd/src/components/ui/use-toast.ts": {
+    "mtime": 1791475944.0729108,
+    "seen": 1791478250.6594646,
+    "ast_hash": "5bff9ea3904b15a9e1908b128c88e75f",
+    "semantic_hash": "5bff9ea3904b15a9e1908b128c88e75f"
+  },
+  "Banrisul/BanrisulFrontEnd/src/contexts/BanrisulContext.tsx": {
+    "mtime": 1791475944.073915,
+    "seen": 1791478250.6594653,
+    "ast_hash": "e92ef798d7e3545fe991765bb6d6a9cb",
+    "semantic_hash": "e92ef798d7e3545fe991765bb6d6a9cb"
+  },
+  "Banrisul/BanrisulFrontEnd/src/hooks/use-mobile.tsx": {
+    "mtime": 1791475944.073915,
+    "seen": 1791478250.659466,
+    "ast_hash": "654e2ca2e9fddc27eb7e3954900dc48e",
+    "semantic_hash": "654e2ca2e9fddc27eb7e3954900dc48e"
+  },
+  "Banrisul/BanrisulFrontEnd/src/hooks/use-toast.ts": {
+    "mtime": 1791475944.073915,
+    "seen": 1791478250.6594665,
+    "ast_hash": "e69924e5c597f9350d681937b80afc51",
+    "semantic_hash": "e69924e5c597f9350d681937b80afc51"
+  },
+  "Banrisul/BanrisulFrontEnd/src/lib/utils.ts": {
+    "mtime": 1791475944.0749176,
+    "seen": 1791478250.659467,
+    "ast_hash": "1d8011eb18769078bf77502b220daa5e",
+    "semantic_hash": "1d8011eb18769078bf77502b220daa5e"
+  },
+  "Banrisul/BanrisulFrontEnd/src/main.tsx": {
+    "mtime": 1791475944.0749176,
+    "seen": 1791478250.6594675,
+    "ast_hash": "cf567f8f60b7cfe4f5183c0028cf6a3b",
+    "semantic_hash": "cf567f8f60b7cfe4f5183c0028cf6a3b"
+  },
+  "Banrisul/BanrisulFrontEnd/src/pages/CadastroConta.tsx": {
+    "mtime": 1791475944.0759184,
+    "seen": 1791478250.659468,
+    "ast_hash": "5c6a147b8770f7364bd634dabd8d5c94",
+    "semantic_hash": "5c6a147b8770f7364bd634dabd8d5c94"
+  },
+  "Banrisul/BanrisulFrontEnd/src/pages/Consentimentos.tsx": {
+    "mtime": 1791475944.0759184,
+    "seen": 1791478250.6594687,
+    "ast_hash": "a3ef9ed717990a8ba9e97e3a54bdc050",
+    "semantic_hash": "a3ef9ed717990a8ba9e97e3a54bdc050"
+  },
+  "Banrisul/BanrisulFrontEnd/src/pages/Extrato.tsx": {
+    "mtime": 1791475944.0769181,
+    "seen": 1791478250.6594691,
+    "ast_hash": "d2f357db4eddeb0787d7e4d57b6b59c4",
+    "semantic_hash": "d2f357db4eddeb0787d7e4d57b6b59c4"
+  },
+  "Banrisul/BanrisulFrontEnd/src/pages/Index.tsx": {
+    "mtime": 1791475944.0769181,
+    "seen": 1791478250.6594696,
+    "ast_hash": "9cf00264d7926a3da8011b1d172f1209",
+    "semantic_hash": "9cf00264d7926a3da8011b1d172f1209"
+  },
+  "Banrisul/BanrisulFrontEnd/src/pages/ListagemContas.tsx": {
+    "mtime": 1791475944.0769181,
+    "seen": 1791478250.65947,
+    "ast_hash": "a845d1b619707693e9aecf414201f982",
+    "semantic_hash": "a845d1b619707693e9aecf414201f982"
+  },
+  "Banrisul/BanrisulFrontEnd/src/pages/NotFound.tsx": {
+    "mtime": 1791475944.0769181,
+    "seen": 1791478250.6594722,
+    "ast_hash": "ae75445e38e704549f03c920e728d506",
+    "semantic_hash": "ae75445e38e704549f03c920e728d506"
+  },
+  "Banrisul/BanrisulFrontEnd/src/pages/OfertasCredito.tsx": {
+    "mtime": 1791475944.0779185,
+    "seen": 1791478250.659473,
+    "ast_hash": "e83046c89e1bd2f7be196e63428437bb",
+    "semantic_hash": "e83046c89e1bd2f7be196e63428437bb"
+  },
+  "Banrisul/BanrisulFrontEnd/src/pages/Transacoes.tsx": {
+    "mtime": 1791475944.0779185,
+    "seen": 1791478250.6594734,
+    "ast_hash": "ff4cc0b811c61db242df01b0f43de04e",
+    "semantic_hash": "ff4cc0b811c61db242df01b0f43de04e"
+  },
+  "Banrisul/BanrisulFrontEnd/src/services/banrisulApi.ts": {
+    "mtime": 1791475944.0779185,
+    "seen": 1791478250.659474,
+    "ast_hash": "004ee873b401ca033e335614c45dbea8",
+    "semantic_hash": "004ee873b401ca033e335614c45dbea8"
+  },
+  "Banrisul/BanrisulFrontEnd/src/vite-env.d.ts": {
+    "mtime": 1791475944.078919,
+    "seen": 1791478250.6594744,
+    "ast_hash": "8f68c27c3fc38817b2726b20e2d4f1ee",
+    "semantic_hash": "8f68c27c3fc38817b2726b20e2d4f1ee"
+  },
+  "Banrisul/BanrisulFrontEnd/tailwind.config.ts": {
+    "mtime": 1791475944.078919,
+    "seen": 1791478250.6594748,
+    "ast_hash": "ae0005c43b0db9554b777be784e941d5",
+    "semantic_hash": "ae0005c43b0db9554b777be784e941d5"
+  },
+  "Banrisul/BanrisulFrontEnd/tsconfig.app.json": {
+    "mtime": 1791475944.078919,
+    "seen": 1791478250.6594756,
+    "ast_hash": "79e98449596e490883e82f8a725d8efa",
+    "semantic_hash": "79e98449596e490883e82f8a725d8efa"
+  },
+  "Banrisul/BanrisulFrontEnd/tsconfig.json": {
+    "mtime": 1791475944.078919,
+    "seen": 1791478250.659476,
+    "ast_hash": "9d63d9b4e08d6b8a8e612909cd1bbb36",
+    "semantic_hash": "9d63d9b4e08d6b8a8e612909cd1bbb36"
+  },
+  "Banrisul/BanrisulFrontEnd/tsconfig.node.json": {
+    "mtime": 1791475944.0799186,
+    "seen": 1791478250.6594765,
+    "ast_hash": "ea3b5c2d9c1cc5d2b3fb3af706f2ca1a",
+    "semantic_hash": "ea3b5c2d9c1cc5d2b3fb3af706f2ca1a"
+  },
+  "Banrisul/BanrisulFrontEnd/vite.config.ts": {
+    "mtime": 1791475944.0799186,
+    "seen": 1791478250.6594772,
+    "ast_hash": "7124b532b5964c3f5010ec0351b7007f",
+    "semantic_hash": "7124b532b5964c3f5010ec0351b7007f"
+  },
+  "Credito360/Credito360BackEnd/package.json": {
+    "mtime": 1791475944.0829184,
+    "seen": 1791478250.6594777,
+    "ast_hash": "fabcd34857e5c9c30fe920372c261a5e",
+    "semantic_hash": "fabcd34857e5c9c30fe920372c261a5e"
+  },
+  "Credito360/Credito360BackEnd/src/app.js": {
+    "mtime": 1791475944.0829184,
+    "seen": 1791478250.6594782,
+    "ast_hash": "b7d7a7052290ac71f98d41926a41132d",
+    "semantic_hash": "b7d7a7052290ac71f98d41926a41132d"
+  },
+  "Credito360/Credito360BackEnd/src/config/config.js": {
+    "mtime": 1791475944.0839572,
+    "seen": 1791478250.659479,
+    "ast_hash": "0ea771b513795ef2c2b40807c9e1b11b",
+    "semantic_hash": "0ea771b513795ef2c2b40807c9e1b11b"
+  },
+  "Credito360/Credito360BackEnd/src/controllers/atualizarScoreController.js": {
+    "mtime": 1791475944.0839572,
+    "seen": 1791478250.6594794,
+    "ast_hash": "8283eb1c4b0e05420d9a0bbe545d3f65",
+    "semantic_hash": "8283eb1c4b0e05420d9a0bbe545d3f65"
+  },
+  "Credito360/Credito360BackEnd/src/controllers/authController.js": {
+    "mtime": 1791475944.0849578,
+    "seen": 1791478250.6594799,
+    "ast_hash": "7adf8bd8f9538bc080c427b7ed174a09",
+    "semantic_hash": "7adf8bd8f9538bc080c427b7ed174a09"
+  },
+  "Credito360/Credito360BackEnd/src/controllers/clienteController.js": {
+    "mtime": 1791475944.0849578,
+    "seen": 1791478250.6594803,
+    "ast_hash": "455d3983b1f59867a21e5405e953672d",
+    "semantic_hash": "455d3983b1f59867a21e5405e953672d"
+  },
+  "Credito360/Credito360BackEnd/src/controllers/conexaoBancariaController.js": {
+    "mtime": 1791475944.0849578,
+    "seen": 1791478250.659481,
+    "ast_hash": "895b912cba931c464bd69d570ad9c375",
+    "semantic_hash": "895b912cba931c464bd69d570ad9c375"
+  },
+  "Credito360/Credito360BackEnd/src/core/scoreAI.js": {
+    "mtime": 1791475944.0859573,
+    "seen": 1791478250.6594815,
+    "ast_hash": "f2889ce7805cd4af6a6e1684f63fc13b",
+    "semantic_hash": "f2889ce7805cd4af6a6e1684f63fc13b"
+  },
+  "Credito360/Credito360BackEnd/src/core/scoreCache.js": {
+    "mtime": 1791475944.0859573,
+    "seen": 1791478250.659482,
+    "ast_hash": "812ac48846e581ec2bbdf6beab89402c",
+    "semantic_hash": "812ac48846e581ec2bbdf6beab89402c"
+  },
+  "Credito360/Credito360BackEnd/src/core/server-score.js": {
+    "mtime": 1791475944.0859573,
+    "seen": 1791478250.6594827,
+    "ast_hash": "a35525d6b755b0525bfc219f3773e4c1",
+    "semantic_hash": "a35525d6b755b0525bfc219f3773e4c1"
+  },
+  "Credito360/Credito360BackEnd/src/middlewares/authMiddleware.js": {
+    "mtime": 1791475944.086957,
+    "seen": 1791478250.6594832,
+    "ast_hash": "87805442aa5fdb4672986c04201a019f",
+    "semantic_hash": "87805442aa5fdb4672986c04201a019f"
+  },
+  "Credito360/Credito360BackEnd/src/migrations/20250607022949-create-cliente.js": {
+    "mtime": 1791475944.0875201,
+    "seen": 1791478250.6594837,
+    "ast_hash": "1c2808d39dcfb29f20ad7c0e7ca9e253",
+    "semantic_hash": "1c2808d39dcfb29f20ad7c0e7ca9e253"
+  },
+  "Credito360/Credito360BackEnd/src/models/Cliente.js": {
+    "mtime": 1791475944.0875201,
+    "seen": 1791478250.6594841,
+    "ast_hash": "2020636aa8e235c803a7d1b2a77b8808",
+    "semantic_hash": "2020636aa8e235c803a7d1b2a77b8808"
+  },
+  "Credito360/Credito360BackEnd/src/models/index.js": {
+    "mtime": 1791475944.0875201,
+    "seen": 1791478250.6594846,
+    "ast_hash": "59a7662e6d1637dbefbdc04b16e91524",
+    "semantic_hash": "59a7662e6d1637dbefbdc04b16e91524"
+  },
+  "Credito360/Credito360BackEnd/src/routes/authRoutes.js": {
+    "mtime": 1791475944.088524,
+    "seen": 1791478250.659485,
+    "ast_hash": "caa038021f93baa4ba339d7a0f47f654",
+    "semantic_hash": "caa038021f93baa4ba339d7a0f47f654"
+  },
+  "Credito360/Credito360BackEnd/src/routes/clienteRoutes.js": {
+    "mtime": 1791475944.088524,
+    "seen": 1791478250.6594856,
+    "ast_hash": "4bed6a6f750f7072825b8d3056c615c6",
+    "semantic_hash": "4bed6a6f750f7072825b8d3056c615c6"
+  },
+  "Credito360/Credito360BackEnd/src/routes/conexaoBancariaRoutes.js": {
+    "mtime": 1791475944.088524,
+    "seen": 1791478250.6594863,
+    "ast_hash": "b5a18122e45e84611bb654af58c18265",
+    "semantic_hash": "b5a18122e45e84611bb654af58c18265"
+  },
+  "Credito360/Credito360BackEnd/src/routes/scoreRoutes.js": {
+    "mtime": 1791475944.088524,
+    "seen": 1791478250.6594868,
+    "ast_hash": "6d1ebb17f86c2e5a911708047eb15ae7",
+    "semantic_hash": "6d1ebb17f86c2e5a911708047eb15ae7"
+  },
+  "Credito360/Credito360BackEnd/src/services/bancos/banrisulService.js": {
+    "mtime": 1791475944.089524,
+    "seen": 1791478250.6594872,
+    "ast_hash": "0d9ad81a8627ca34c7ee1292ee42823e",
+    "semantic_hash": "0d9ad81a8627ca34c7ee1292ee42823e"
+  },
+  "Credito360/Credito360BackEnd/src/services/bancos/itauService.js": {
+    "mtime": 1791475944.089524,
+    "seen": 1791478250.659488,
+    "ast_hash": "efb3cd81be91c29241d3211978831379",
+    "semantic_hash": "efb3cd81be91c29241d3211978831379"
+  },
+  "Credito360/Credito360BackEnd/src/services/bancos/mercadoPagoService.js": {
+    "mtime": 1791475944.0905244,
+    "seen": 1791478250.6594884,
+    "ast_hash": "86c197412c379e75629a4f1eb60c38e4",
+    "semantic_hash": "86c197412c379e75629a4f1eb60c38e4"
+  },
+  "Credito360/Credito360BackEnd/src/services/bancos/sicrediService.js": {
+    "mtime": 1791475944.0905244,
+    "seen": 1791478250.659489,
+    "ast_hash": "f08f3413b59efbe58e1871b5dfa77ab2",
+    "semantic_hash": "f08f3413b59efbe58e1871b5dfa77ab2"
+  },
+  "Credito360/Credito360FrontEnd/components.json": {
+    "mtime": 1791475944.091524,
+    "seen": 1791478250.6594896,
+    "ast_hash": "bfe8fda7814d7c5a44aff2aef2dd86ec",
+    "semantic_hash": "bfe8fda7814d7c5a44aff2aef2dd86ec"
+  },
+  "Credito360/Credito360FrontEnd/eslint.config.js": {
+    "mtime": 1791475944.091524,
+    "seen": 1791478250.65949,
+    "ast_hash": "2e240281bad56fce6a86cb0e49590ae9",
+    "semantic_hash": "2e240281bad56fce6a86cb0e49590ae9"
+  },
+  "Credito360/Credito360FrontEnd/package.json": {
+    "mtime": 1791475944.0940323,
+    "seen": 1791478250.6594906,
+    "ast_hash": "24b092617709f04093713f316089f30b",
+    "semantic_hash": "24b092617709f04093713f316089f30b"
+  },
+  "Credito360/Credito360FrontEnd/postcss.config.js": {
+    "mtime": 1791475944.0940323,
+    "seen": 1791478250.659491,
+    "ast_hash": "5b84f4567208c7c747079c0477373231",
+    "semantic_hash": "5b84f4567208c7c747079c0477373231"
+  },
+  "Credito360/Credito360FrontEnd/src/App.tsx": {
+    "mtime": 1791475944.0990324,
+    "seen": 1791478250.6594915,
+    "ast_hash": "54fe21140bec32578ea31a1aa99e21b9",
+    "semantic_hash": "54fe21140bec32578ea31a1aa99e21b9"
+  },
+  "Credito360/Credito360FrontEnd/src/components/Navigation.tsx": {
+    "mtime": 1791475944.1000316,
+    "seen": 1791478250.659492,
+    "ast_hash": "786b18f26986be27605cce50da92c70d",
+    "semantic_hash": "786b18f26986be27605cce50da92c70d"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ProtectedRoute.tsx": {
+    "mtime": 1791475944.1000316,
+    "seen": 1791478250.6594925,
+    "ast_hash": "bf6d62807f0e04f556a885afa0a91873",
+    "semantic_hash": "bf6d62807f0e04f556a885afa0a91873"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/accordion.tsx": {
+    "mtime": 1791475944.1000316,
+    "seen": 1791478250.6594932,
+    "ast_hash": "1a18877296af9e613340447038cb8cb1",
+    "semantic_hash": "1a18877296af9e613340447038cb8cb1"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/alert-dialog.tsx": {
+    "mtime": 1791475944.1000316,
+    "seen": 1791478250.6594937,
+    "ast_hash": "18a643a884fd4f2832ef3abe20b35eb6",
+    "semantic_hash": "18a643a884fd4f2832ef3abe20b35eb6"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/alert.tsx": {
+    "mtime": 1791475944.1010323,
+    "seen": 1791478250.6594942,
+    "ast_hash": "59e3895ea793fed08d8d9f0f83ad13df",
+    "semantic_hash": "59e3895ea793fed08d8d9f0f83ad13df"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/aspect-ratio.tsx": {
+    "mtime": 1791475944.1010323,
+    "seen": 1791478250.6594946,
+    "ast_hash": "114d53f29a18d0e8b5e48f5ff3811e15",
+    "semantic_hash": "114d53f29a18d0e8b5e48f5ff3811e15"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/avatar.tsx": {
+    "mtime": 1791475944.1010323,
+    "seen": 1791478250.6594954,
+    "ast_hash": "8f44230e5058b7ace8269c971da7189e",
+    "semantic_hash": "8f44230e5058b7ace8269c971da7189e"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/badge.tsx": {
+    "mtime": 1791475944.102032,
+    "seen": 1791478250.6594958,
+    "ast_hash": "2ba8b44541085f725b216267f9feb892",
+    "semantic_hash": "2ba8b44541085f725b216267f9feb892"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/breadcrumb.tsx": {
+    "mtime": 1791475944.102032,
+    "seen": 1791478250.6594968,
+    "ast_hash": "9fca9864de9b9b15e088c2a237c8594b",
+    "semantic_hash": "9fca9864de9b9b15e088c2a237c8594b"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/button.tsx": {
+    "mtime": 1791475944.102032,
+    "seen": 1791478250.6594973,
+    "ast_hash": "55bae00127c054032e205b63a62802db",
+    "semantic_hash": "55bae00127c054032e205b63a62802db"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/calendar.tsx": {
+    "mtime": 1791475944.102032,
+    "seen": 1791478250.6594975,
+    "ast_hash": "476dc9f9aa1ea81ac3dd0138011ac442",
+    "semantic_hash": "476dc9f9aa1ea81ac3dd0138011ac442"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/card.tsx": {
+    "mtime": 1791475944.103032,
+    "seen": 1791478250.659498,
+    "ast_hash": "aed5be3990f288c539122080ef55490c",
+    "semantic_hash": "aed5be3990f288c539122080ef55490c"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/carousel.tsx": {
+    "mtime": 1791475944.103032,
+    "seen": 1791478250.6594987,
+    "ast_hash": "14a5dcc894d9bc2b7730372507ed1b43",
+    "semantic_hash": "14a5dcc894d9bc2b7730372507ed1b43"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/chart.tsx": {
+    "mtime": 1791475944.1035357,
+    "seen": 1791478250.6594992,
+    "ast_hash": "145e8ee7e39401d9b5d59f0e9f05318f",
+    "semantic_hash": "145e8ee7e39401d9b5d59f0e9f05318f"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/checkbox.tsx": {
+    "mtime": 1791475944.1035357,
+    "seen": 1791478250.6595,
+    "ast_hash": "e8850db2b4357ce03822d84c54b72633",
+    "semantic_hash": "e8850db2b4357ce03822d84c54b72633"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/collapsible.tsx": {
+    "mtime": 1791475944.1035357,
+    "seen": 1791478250.6595004,
+    "ast_hash": "1048c23a2aadd5fdbbde0b04ec61e5cf",
+    "semantic_hash": "1048c23a2aadd5fdbbde0b04ec61e5cf"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/command.tsx": {
+    "mtime": 1791475944.1045399,
+    "seen": 1791478250.6595008,
+    "ast_hash": "ddaf5f8eb7775107668d1a8175ea32f8",
+    "semantic_hash": "ddaf5f8eb7775107668d1a8175ea32f8"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/context-menu.tsx": {
+    "mtime": 1791475944.1045399,
+    "seen": 1791478250.6595013,
+    "ast_hash": "45f2a0aa025bab9b8f9965b24a73b970",
+    "semantic_hash": "45f2a0aa025bab9b8f9965b24a73b970"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/dialog.tsx": {
+    "mtime": 1791475944.1045399,
+    "seen": 1791478250.6595018,
+    "ast_hash": "3d8d7b8910a4fc37afd0cf021e16edde",
+    "semantic_hash": "3d8d7b8910a4fc37afd0cf021e16edde"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/drawer.tsx": {
+    "mtime": 1791475944.1045399,
+    "seen": 1791478250.6595023,
+    "ast_hash": "2a1e7b21cfd5c0043e6abc45a9117d4e",
+    "semantic_hash": "2a1e7b21cfd5c0043e6abc45a9117d4e"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/dropdown-menu.tsx": {
+    "mtime": 1791475944.1055431,
+    "seen": 1791478250.6595027,
+    "ast_hash": "feacc91c0a5b8640b6f5cc8a98699c50",
+    "semantic_hash": "feacc91c0a5b8640b6f5cc8a98699c50"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/form.tsx": {
+    "mtime": 1791475944.1055431,
+    "seen": 1791478250.6595035,
+    "ast_hash": "d6d30c3aae6f6d8d6299d67745504b48",
+    "semantic_hash": "d6d30c3aae6f6d8d6299d67745504b48"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/hover-card.tsx": {
+    "mtime": 1791475944.1055431,
+    "seen": 1791478250.6595042,
+    "ast_hash": "d7a103b77cc23f719887c6c90abef8a4",
+    "semantic_hash": "d7a103b77cc23f719887c6c90abef8a4"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/input-otp.tsx": {
+    "mtime": 1791475944.1055431,
+    "seen": 1791478250.6595044,
+    "ast_hash": "feb9e193d5c6666a5682df9fbba1536b",
+    "semantic_hash": "feb9e193d5c6666a5682df9fbba1536b"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/input.tsx": {
+    "mtime": 1791475944.1065433,
+    "seen": 1791478250.6595051,
+    "ast_hash": "f5c3f6115f14eb06180e98b0e302bc00",
+    "semantic_hash": "f5c3f6115f14eb06180e98b0e302bc00"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/label.tsx": {
+    "mtime": 1791475944.1065433,
+    "seen": 1791478250.6595056,
+    "ast_hash": "99b8b7244860ecba9ce05f5a644e0360",
+    "semantic_hash": "99b8b7244860ecba9ce05f5a644e0360"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/menubar.tsx": {
+    "mtime": 1791475944.1065433,
+    "seen": 1791478250.659506,
+    "ast_hash": "791b0aa130a5be6588b3710a5ab704dd",
+    "semantic_hash": "791b0aa130a5be6588b3710a5ab704dd"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/navigation-menu.tsx": {
+    "mtime": 1791475944.1065433,
+    "seen": 1791478250.6595068,
+    "ast_hash": "595bbede1d5900b44f8f101f40b51ae2",
+    "semantic_hash": "595bbede1d5900b44f8f101f40b51ae2"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/pagination.tsx": {
+    "mtime": 1791475944.1075435,
+    "seen": 1791478250.6595075,
+    "ast_hash": "fbe4e3289596434c7135c536a71887d1",
+    "semantic_hash": "fbe4e3289596434c7135c536a71887d1"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/popover.tsx": {
+    "mtime": 1791475944.1075435,
+    "seen": 1791478250.659508,
+    "ast_hash": "686fa6dc4c8e3f0e5c0e542b2a62ec4f",
+    "semantic_hash": "686fa6dc4c8e3f0e5c0e542b2a62ec4f"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/progress.tsx": {
+    "mtime": 1791475944.1085434,
+    "seen": 1791478250.6595085,
+    "ast_hash": "7a84c9ee8e9cd63771d4b472704d8d80",
+    "semantic_hash": "7a84c9ee8e9cd63771d4b472704d8d80"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/radio-group.tsx": {
+    "mtime": 1791475944.1085434,
+    "seen": 1791478250.659509,
+    "ast_hash": "e59c6e8ca6130d694a2cae82a83cb8dc",
+    "semantic_hash": "e59c6e8ca6130d694a2cae82a83cb8dc"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/resizable.tsx": {
+    "mtime": 1791475944.1085434,
+    "seen": 1791478250.6595094,
+    "ast_hash": "a2f25b7becb25ae05252b81ca564bc5e",
+    "semantic_hash": "a2f25b7becb25ae05252b81ca564bc5e"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/scroll-area.tsx": {
+    "mtime": 1791475944.1095433,
+    "seen": 1791478250.65951,
+    "ast_hash": "6399ea030114b4a772f03f7dae127708",
+    "semantic_hash": "6399ea030114b4a772f03f7dae127708"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/select.tsx": {
+    "mtime": 1791475944.1095433,
+    "seen": 1791478250.6595109,
+    "ast_hash": "d5bc9af6e00c50edda84c80201516bd0",
+    "semantic_hash": "d5bc9af6e00c50edda84c80201516bd0"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/separator.tsx": {
+    "mtime": 1791475944.1095433,
+    "seen": 1791478250.6595142,
+    "ast_hash": "14b352d106f7c90830cea0ce57cdbde5",
+    "semantic_hash": "14b352d106f7c90830cea0ce57cdbde5"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/sheet.tsx": {
+    "mtime": 1791475944.1095433,
+    "seen": 1791478250.6595147,
+    "ast_hash": "2e1504ca5868ca649a2e79fc0891057e",
+    "semantic_hash": "2e1504ca5868ca649a2e79fc0891057e"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/sidebar.tsx": {
+    "mtime": 1791475944.1105437,
+    "seen": 1791478250.659515,
+    "ast_hash": "1a26aa46e0801e649150dc50e3851bfe",
+    "semantic_hash": "1a26aa46e0801e649150dc50e3851bfe"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/skeleton.tsx": {
+    "mtime": 1791475944.1105437,
+    "seen": 1791478250.6595156,
+    "ast_hash": "0166abaa35206d438bd5ac705fb5dfb7",
+    "semantic_hash": "0166abaa35206d438bd5ac705fb5dfb7"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/slider.tsx": {
+    "mtime": 1791475944.1105437,
+    "seen": 1791478250.659516,
+    "ast_hash": "e8f00aaf3fa17aeaab4f63145045be78",
+    "semantic_hash": "e8f00aaf3fa17aeaab4f63145045be78"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/sonner.tsx": {
+    "mtime": 1791475944.1105437,
+    "seen": 1791478250.6595166,
+    "ast_hash": "86a425e27fb4e58a48d9cfb6868fb715",
+    "semantic_hash": "86a425e27fb4e58a48d9cfb6868fb715"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/switch.tsx": {
+    "mtime": 1791475944.1115434,
+    "seen": 1791478250.6595173,
+    "ast_hash": "c86b3514e573211535c13444639bcc30",
+    "semantic_hash": "c86b3514e573211535c13444639bcc30"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/table.tsx": {
+    "mtime": 1791475944.1115434,
+    "seen": 1791478250.6595178,
+    "ast_hash": "554e91a3c4302c898342d712f80c3718",
+    "semantic_hash": "554e91a3c4302c898342d712f80c3718"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/tabs.tsx": {
+    "mtime": 1791475944.1115434,
+    "seen": 1791478250.6595182,
+    "ast_hash": "3e664ca1ea5a9fbedaba0c2a4c0ca2d2",
+    "semantic_hash": "3e664ca1ea5a9fbedaba0c2a4c0ca2d2"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/textarea.tsx": {
+    "mtime": 1791475944.1115434,
+    "seen": 1791478250.6595187,
+    "ast_hash": "31f5d6d52ea14c1411296ee63003e4d7",
+    "semantic_hash": "31f5d6d52ea14c1411296ee63003e4d7"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/toast.tsx": {
+    "mtime": 1791475944.1130538,
+    "seen": 1791478250.6595194,
+    "ast_hash": "dbe9a151d339d621290dd6b42406e5fe",
+    "semantic_hash": "dbe9a151d339d621290dd6b42406e5fe"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/toaster.tsx": {
+    "mtime": 1791475944.1130538,
+    "seen": 1791478250.65952,
+    "ast_hash": "daf7b04904d77303dd96a17236e24fbb",
+    "semantic_hash": "daf7b04904d77303dd96a17236e24fbb"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/toggle-group.tsx": {
+    "mtime": 1791475944.1130538,
+    "seen": 1791478250.6595206,
+    "ast_hash": "9cdf37fe38d53d66fd4c7131599fd6f1",
+    "semantic_hash": "9cdf37fe38d53d66fd4c7131599fd6f1"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/toggle.tsx": {
+    "mtime": 1791475944.114058,
+    "seen": 1791478250.659521,
+    "ast_hash": "3914f58aeec727c94dfb13b6a25487c1",
+    "semantic_hash": "3914f58aeec727c94dfb13b6a25487c1"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/tooltip.tsx": {
+    "mtime": 1791475944.114058,
+    "seen": 1791478250.6595216,
+    "ast_hash": "57dbf3a262604092e7b52ffe1b715c5c",
+    "semantic_hash": "57dbf3a262604092e7b52ffe1b715c5c"
+  },
+  "Credito360/Credito360FrontEnd/src/components/ui/use-toast.ts": {
+    "mtime": 1791475944.114058,
+    "seen": 1791478250.659522,
+    "ast_hash": "5bff9ea3904b15a9e1908b128c88e75f",
+    "semantic_hash": "5bff9ea3904b15a9e1908b128c88e75f"
+  },
+  "Credito360/Credito360FrontEnd/src/contexts/AuthContext.tsx": {
+    "mtime": 1791475944.115058,
+    "seen": 1791478250.6595225,
+    "ast_hash": "698369f62ac0857a5908c6058dd06fcb",
+    "semantic_hash": "698369f62ac0857a5908c6058dd06fcb"
+  },
+  "Credito360/Credito360FrontEnd/src/hooks/use-mobile.tsx": {
+    "mtime": 1791475944.115058,
+    "seen": 1791478250.659523,
+    "ast_hash": "654e2ca2e9fddc27eb7e3954900dc48e",
+    "semantic_hash": "654e2ca2e9fddc27eb7e3954900dc48e"
+  },
+  "Credito360/Credito360FrontEnd/src/hooks/use-toast.ts": {
+    "mtime": 1791475944.115058,
+    "seen": 1791478250.6595235,
+    "ast_hash": "e69924e5c597f9350d681937b80afc51",
+    "semantic_hash": "e69924e5c597f9350d681937b80afc51"
+  },
+  "Credito360/Credito360FrontEnd/src/lib/utils.ts": {
+    "mtime": 1791475944.1160572,
+    "seen": 1791478250.6595242,
+    "ast_hash": "1d8011eb18769078bf77502b220daa5e",
+    "semantic_hash": "1d8011eb18769078bf77502b220daa5e"
+  },
+  "Credito360/Credito360FrontEnd/src/main.tsx": {
+    "mtime": 1791475944.1160572,
+    "seen": 1791478250.659525,
+    "ast_hash": "cf567f8f60b7cfe4f5183c0028cf6a3b",
+    "semantic_hash": "cf567f8f60b7cfe4f5183c0028cf6a3b"
+  },
+  "Credito360/Credito360FrontEnd/src/pages/ConnectBanks.tsx": {
+    "mtime": 1791475944.117176,
+    "seen": 1791478250.6595254,
+    "ast_hash": "00f718d6928730b41480a52a69398ac6",
+    "semantic_hash": "00f718d6928730b41480a52a69398ac6"
+  },
+  "Credito360/Credito360FrontEnd/src/pages/Dashboard.tsx": {
+    "mtime": 1791475944.117176,
+    "seen": 1791478250.6595259,
+    "ast_hash": "9d28b5620bdcc7dbc81688f2a28ab341",
+    "semantic_hash": "9d28b5620bdcc7dbc81688f2a28ab341"
+  },
+  "Credito360/Credito360FrontEnd/src/pages/Index.tsx": {
+    "mtime": 1791475944.117176,
+    "seen": 1791478250.6595263,
+    "ast_hash": "41223af05abd180059d50f652a84b1f9",
+    "semantic_hash": "41223af05abd180059d50f652a84b1f9"
+  },
+  "Credito360/Credito360FrontEnd/src/pages/LandingPage.tsx": {
+    "mtime": 1791475944.1181796,
+    "seen": 1791478250.659527,
+    "ast_hash": "2e05cf93f892a0b37152aaa4be3e8290",
+    "semantic_hash": "2e05cf93f892a0b37152aaa4be3e8290"
+  },
+  "Credito360/Credito360FrontEnd/src/pages/Login.tsx": {
+    "mtime": 1791475944.1181796,
+    "seen": 1791478250.6595278,
+    "ast_hash": "c365de105eb5fc60a8ae4b162ddaa8d2",
+    "semantic_hash": "c365de105eb5fc60a8ae4b162ddaa8d2"
+  },
+  "Credito360/Credito360FrontEnd/src/pages/NotFound.tsx": {
+    "mtime": 1791475944.1181796,
+    "seen": 1791478250.6595283,
+    "ast_hash": "ae75445e38e704549f03c920e728d506",
+    "semantic_hash": "ae75445e38e704549f03c920e728d506"
+  },
+  "Credito360/Credito360FrontEnd/src/pages/Offers.tsx": {
+    "mtime": 1791475944.1181796,
+    "seen": 1791478250.659529,
+    "ast_hash": "a4461681fab81aa189b1150d266414f3",
+    "semantic_hash": "a4461681fab81aa189b1150d266414f3"
+  },
+  "Credito360/Credito360FrontEnd/src/pages/Register.tsx": {
+    "mtime": 1791475944.1194475,
+    "seen": 1791478250.6595294,
+    "ast_hash": "7ecb5d9106eb3d02d9de399268507b30",
+    "semantic_hash": "7ecb5d9106eb3d02d9de399268507b30"
+  },
+  "Credito360/Credito360FrontEnd/src/pages/UpdateScore.tsx": {
+    "mtime": 1791475944.1194475,
+    "seen": 1791478250.65953,
+    "ast_hash": "658ad8aa2c2c60c20a847b0ffcc3d57e",
+    "semantic_hash": "658ad8aa2c2c60c20a847b0ffcc3d57e"
+  },
+  "Credito360/Credito360FrontEnd/src/vite-env.d.ts": {
+    "mtime": 1791475944.1194475,
+    "seen": 1791478250.6595304,
+    "ast_hash": "8f68c27c3fc38817b2726b20e2d4f1ee",
+    "semantic_hash": "8f68c27c3fc38817b2726b20e2d4f1ee"
+  },
+  "Credito360/Credito360FrontEnd/tailwind.config.ts": {
+    "mtime": 1791475944.1194475,
+    "seen": 1791478250.659531,
+    "ast_hash": "9cd7a6c04da3f1263b02aec22e6ce5fa",
+    "semantic_hash": "9cd7a6c04da3f1263b02aec22e6ce5fa"
+  },
+  "Credito360/Credito360FrontEnd/tsconfig.app.json": {
+    "mtime": 1791475944.120451,
+    "seen": 1791478250.6595316,
+    "ast_hash": "79e98449596e490883e82f8a725d8efa",
+    "semantic_hash": "79e98449596e490883e82f8a725d8efa"
+  },
+  "Credito360/Credito360FrontEnd/tsconfig.json": {
+    "mtime": 1791475944.120451,
+    "seen": 1791478250.659532,
+    "ast_hash": "9d63d9b4e08d6b8a8e612909cd1bbb36",
+    "semantic_hash": "9d63d9b4e08d6b8a8e612909cd1bbb36"
+  },
+  "Credito360/Credito360FrontEnd/tsconfig.node.json": {
+    "mtime": 1791475944.120451,
+    "seen": 1791478250.6595328,
+    "ast_hash": "ea3b5c2d9c1cc5d2b3fb3af706f2ca1a",
+    "semantic_hash": "ea3b5c2d9c1cc5d2b3fb3af706f2ca1a"
+  },
+  "Credito360/Credito360FrontEnd/vite.config.ts": {
+    "mtime": 1791475944.120451,
+    "seen": 1791478250.6595333,
+    "ast_hash": "7124b532b5964c3f5010ec0351b7007f",
+    "semantic_hash": "7124b532b5964c3f5010ec0351b7007f"
+  },
+  "Itau/ItauBackEnd/app.js": {
+    "mtime": 1791475944.121451,
+    "seen": 1791478250.6595337,
+    "ast_hash": "5564f2eb44963d5bf1e171d58f4fd440",
+    "semantic_hash": "5564f2eb44963d5bf1e171d58f4fd440"
+  },
+  "Itau/ItauBackEnd/package.json": {
+    "mtime": 1791475944.1229546,
+    "seen": 1791478250.6595345,
+    "ast_hash": "c1b32078a3930ee140f2fedd9a3475be",
+    "semantic_hash": "c1b32078a3930ee140f2fedd9a3475be"
+  },
+  "Itau/ItauBackEnd/src/config/config.js": {
+    "mtime": 1791475944.1239588,
+    "seen": 1791478250.659535,
+    "ast_hash": "9fe12d77956e598cf2b9669240300651",
+    "semantic_hash": "9fe12d77956e598cf2b9669240300651"
+  },
+  "Itau/ItauBackEnd/src/controllers/authController.js": {
+    "mtime": 1791475944.1239588,
+    "seen": 1791478250.6595354,
+    "ast_hash": "62c1ff6a75748d3d166e69da7dc66e3e",
+    "semantic_hash": "62c1ff6a75748d3d166e69da7dc66e3e"
+  },
+  "Itau/ItauBackEnd/src/controllers/consentimentoController.js": {
+    "mtime": 1791475944.124959,
+    "seen": 1791478250.659536,
+    "ast_hash": "17e2a3cd20d1d873ef910782a4723961",
+    "semantic_hash": "17e2a3cd20d1d873ef910782a4723961"
+  },
+  "Itau/ItauBackEnd/src/controllers/contaController.js": {
+    "mtime": 1791475944.124959,
+    "seen": 1791478250.6595364,
+    "ast_hash": "f2a972ad6d472a9dc257574513c5b600",
+    "semantic_hash": "f2a972ad6d472a9dc257574513c5b600"
+  },
+  "Itau/ItauBackEnd/src/controllers/ofertaController.js": {
+    "mtime": 1791475944.124959,
+    "seen": 1791478250.6595368,
+    "ast_hash": "4fd444cafb025584ae640c57da02086a",
+    "semantic_hash": "4fd444cafb025584ae640c57da02086a"
+  },
+  "Itau/ItauBackEnd/src/controllers/openFinanceController.js": {
+    "mtime": 1791475944.1259632,
+    "seen": 1791478250.6595373,
+    "ast_hash": "2d237dc1a3e208f45189fa596e3da1e4",
+    "semantic_hash": "2d237dc1a3e208f45189fa596e3da1e4"
+  },
+  "Itau/ItauBackEnd/src/controllers/transacaoController.js": {
+    "mtime": 1791475944.1259632,
+    "seen": 1791478250.659538,
+    "ast_hash": "619a2d7a06d87bf0056769f6c21ed655",
+    "semantic_hash": "619a2d7a06d87bf0056769f6c21ed655"
+  },
+  "Itau/ItauBackEnd/src/middlewares/authMiddleware.js": {
+    "mtime": 1791475944.1259632,
+    "seen": 1791478250.6595387,
+    "ast_hash": "d320843def906a762da9ee065ca0c3e5",
+    "semantic_hash": "d320843def906a762da9ee065ca0c3e5"
+  },
+  "Itau/ItauBackEnd/src/middlewares/validarCamposObrigatorios.js": {
+    "mtime": 1791475944.126963,
+    "seen": 1791478250.6595392,
+    "ast_hash": "bffc20b05a398c394860472acd8f2002",
+    "semantic_hash": "bffc20b05a398c394860472acd8f2002"
+  },
+  "Itau/ItauBackEnd/src/middlewares/validarConsentimento.js": {
+    "mtime": 1791475944.126963,
+    "seen": 1791478250.6595397,
+    "ast_hash": "b5b08e389b2c4c69107136e7e27584e7",
+    "semantic_hash": "b5b08e389b2c4c69107136e7e27584e7"
+  },
+  "Itau/ItauBackEnd/src/middlewares/verificarNumeroContaExiste.js": {
+    "mtime": 1791475944.126963,
+    "seen": 1791478250.6595402,
+    "ast_hash": "a751c8f5a978621bf0183b44bd661696",
+    "semantic_hash": "a751c8f5a978621bf0183b44bd661696"
+  },
+  "Itau/ItauBackEnd/src/migrations/20250531012157-enable-uuid-ossp.js": {
+    "mtime": 1791475944.1279628,
+    "seen": 1791478250.659541,
+    "ast_hash": "e3e1f1378427cecc25b81a294403cf02",
+    "semantic_hash": "e3e1f1378427cecc25b81a294403cf02"
+  },
+  "Itau/ItauBackEnd/src/migrations/20250531031358-create-conta.js": {
+    "mtime": 1791475944.1279628,
+    "seen": 1791478250.6595418,
+    "ast_hash": "337d2cde9545657f0b43cfcf54c001ed",
+    "semantic_hash": "337d2cde9545657f0b43cfcf54c001ed"
+  },
+  "Itau/ItauBackEnd/src/migrations/20250531043913-create-transacao.js": {
+    "mtime": 1791475944.1279628,
+    "seen": 1791478250.6595423,
+    "ast_hash": "f0ff09672ad95b785dc0a9d8c0f37109",
+    "semantic_hash": "f0ff09672ad95b785dc0a9d8c0f37109"
+  },
+  "Itau/ItauBackEnd/src/migrations/20250531050307-create-oferta.js": {
+    "mtime": 1791475944.1289628,
+    "seen": 1791478250.6595428,
+    "ast_hash": "2dd6c1f9d296261ab3fcd69c342b925c",
+    "semantic_hash": "2dd6c1f9d296261ab3fcd69c342b925c"
+  },
+  "Itau/ItauBackEnd/src/migrations/20250604042031-create-consentimento.js": {
+    "mtime": 1791475944.1289628,
+    "seen": 1791478250.6595433,
+    "ast_hash": "1cb1b59a14b5a4abb607e14806cc1d65",
+    "semantic_hash": "1cb1b59a14b5a4abb607e14806cc1d65"
+  },
+  "Itau/ItauBackEnd/src/models/Consentimento.js": {
+    "mtime": 1791475944.1289628,
+    "seen": 1791478250.659544,
+    "ast_hash": "8736ba8ef2ec4768f6f3b566f0b81d8f",
+    "semantic_hash": "8736ba8ef2ec4768f6f3b566f0b81d8f"
+  },
+  "Itau/ItauBackEnd/src/models/Conta.js": {
+    "mtime": 1791475944.1299627,
+    "seen": 1791478250.6595445,
+    "ast_hash": "9038db79979892815ee0aef8fb16ff67",
+    "semantic_hash": "9038db79979892815ee0aef8fb16ff67"
+  },
+  "Itau/ItauBackEnd/src/models/Oferta.js": {
+    "mtime": 1791475944.1299627,
+    "seen": 1791478250.6595461,
+    "ast_hash": "670b3a4270184e1b98b7c45478b830ea",
+    "semantic_hash": "670b3a4270184e1b98b7c45478b830ea"
+  },
+  "Itau/ItauBackEnd/src/models/Transacao.js": {
+    "mtime": 1791475944.1299627,
+    "seen": 1791478250.6595466,
+    "ast_hash": "20b67b38c56c9ba852c0969eaaf276ec",
+    "semantic_hash": "20b67b38c56c9ba852c0969eaaf276ec"
+  },
+  "Itau/ItauBackEnd/src/models/index.js": {
+    "mtime": 1791475944.1299627,
+    "seen": 1791478250.659547,
+    "ast_hash": "b1cb64901fd625040a3eafa4ce4b2e7a",
+    "semantic_hash": "b1cb64901fd625040a3eafa4ce4b2e7a"
+  },
+  "Itau/ItauBackEnd/src/routes/authRoutes.js": {
+    "mtime": 1791475944.130965,
+    "seen": 1791478250.6595476,
+    "ast_hash": "51ea39eb747e949394c837c7320d5686",
+    "semantic_hash": "51ea39eb747e949394c837c7320d5686"
+  },
+  "Itau/ItauBackEnd/src/routes/consentimentoRoutes.js": {
+    "mtime": 1791475944.130965,
+    "seen": 1791478250.6595485,
+    "ast_hash": "ae89a3c96f34919827e9f2d9d5a06af5",
+    "semantic_hash": "ae89a3c96f34919827e9f2d9d5a06af5"
+  },
+  "Itau/ItauBackEnd/src/routes/contaRoutes.js": {
+    "mtime": 1791475944.130965,
+    "seen": 1791478250.659549,
+    "ast_hash": "d42f1618b58097320a6c90e062bc7c96",
+    "semantic_hash": "d42f1618b58097320a6c90e062bc7c96"
+  },
+  "Itau/ItauBackEnd/src/routes/ofertaRoutes.js": {
+    "mtime": 1791475944.1320813,
+    "seen": 1791478250.6595495,
+    "ast_hash": "47fde5f2ae5da264a2e7b96840cff158",
+    "semantic_hash": "47fde5f2ae5da264a2e7b96840cff158"
+  },
+  "Itau/ItauBackEnd/src/routes/openFinanceRoutes.js": {
+    "mtime": 1791475944.1320813,
+    "seen": 1791478250.65955,
+    "ast_hash": "9007fe05efc27961f704e3c953051372",
+    "semantic_hash": "9007fe05efc27961f704e3c953051372"
+  },
+  "Itau/ItauBackEnd/src/routes/transacaoRoutes.js": {
+    "mtime": 1791475944.1320813,
+    "seen": 1791478250.6595504,
+    "ast_hash": "b6f984b4fd1563d28834b11f36941dfb",
+    "semantic_hash": "b6f984b4fd1563d28834b11f36941dfb"
+  },
+  "Itau/ItauBackEnd/src/seeders/20250604035525-seed-contas.js": {
+    "mtime": 1791475944.1320813,
+    "seen": 1791478250.659551,
+    "ast_hash": "7041fc806ad23c153d369d93d7937a20",
+    "semantic_hash": "7041fc806ad23c153d369d93d7937a20"
+  },
+  "Itau/ItauBackEnd/src/seeders/20250604035702-seed-ofertas.js": {
+    "mtime": 1791475944.1330843,
+    "seen": 1791478250.6595514,
+    "ast_hash": "6c7c54d14634f31c07122038165156ac",
+    "semantic_hash": "6c7c54d14634f31c07122038165156ac"
+  },
+  "Itau/ItauBackEnd/src/seeders/20250604040042-seed-transacoes.js": {
+    "mtime": 1791475944.1330843,
+    "seen": 1791478250.6595523,
+    "ast_hash": "36dcfe56dbeab0f5564a141e4455cca3",
+    "semantic_hash": "36dcfe56dbeab0f5564a141e4455cca3"
+  },
+  "MercadoPago/MercadoPagoBackEnd/app.js": {
+    "mtime": 1791475944.1340888,
+    "seen": 1791478250.6595528,
+    "ast_hash": "fd378bde15a7c93bb6d6618fd66436e5",
+    "semantic_hash": "fd378bde15a7c93bb6d6618fd66436e5"
+  },
+  "MercadoPago/MercadoPagoBackEnd/package.json": {
+    "mtime": 1791475944.1360886,
+    "seen": 1791478250.6595533,
+    "ast_hash": "c1b32078a3930ee140f2fedd9a3475be",
+    "semantic_hash": "c1b32078a3930ee140f2fedd9a3475be"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/config/config.js": {
+    "mtime": 1791475944.1360886,
+    "seen": 1791478250.6595538,
+    "ast_hash": "9fe12d77956e598cf2b9669240300651",
+    "semantic_hash": "9fe12d77956e598cf2b9669240300651"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/controllers/authController.js": {
+    "mtime": 1791475944.1373239,
+    "seen": 1791478250.6595545,
+    "ast_hash": "62c1ff6a75748d3d166e69da7dc66e3e",
+    "semantic_hash": "62c1ff6a75748d3d166e69da7dc66e3e"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/controllers/consentimentoController.js": {
+    "mtime": 1791475944.1373239,
+    "seen": 1791478250.659555,
+    "ast_hash": "17e2a3cd20d1d873ef910782a4723961",
+    "semantic_hash": "17e2a3cd20d1d873ef910782a4723961"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/controllers/contaController.js": {
+    "mtime": 1791475944.1373239,
+    "seen": 1791478250.6595557,
+    "ast_hash": "d8fa2fa5fbfa66d5529103677665d6fb",
+    "semantic_hash": "d8fa2fa5fbfa66d5529103677665d6fb"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/controllers/ofertaController.js": {
+    "mtime": 1791475944.1373239,
+    "seen": 1791478250.6595562,
+    "ast_hash": "4fd444cafb025584ae640c57da02086a",
+    "semantic_hash": "4fd444cafb025584ae640c57da02086a"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/controllers/openFinanceController.js": {
+    "mtime": 1791475944.1383276,
+    "seen": 1791478250.6595566,
+    "ast_hash": "8e96ffb1f429922fd947ad4d00a43622",
+    "semantic_hash": "8e96ffb1f429922fd947ad4d00a43622"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/controllers/transacaoController.js": {
+    "mtime": 1791475944.1383276,
+    "seen": 1791478250.659557,
+    "ast_hash": "619a2d7a06d87bf0056769f6c21ed655",
+    "semantic_hash": "619a2d7a06d87bf0056769f6c21ed655"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/middlewares/authMiddleware.js": {
+    "mtime": 1791475944.1383276,
+    "seen": 1791478250.6595578,
+    "ast_hash": "d320843def906a762da9ee065ca0c3e5",
+    "semantic_hash": "d320843def906a762da9ee065ca0c3e5"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/middlewares/validarCamposObrigatorios.js": {
+    "mtime": 1791475944.139328,
+    "seen": 1791478250.6595583,
+    "ast_hash": "bffc20b05a398c394860472acd8f2002",
+    "semantic_hash": "bffc20b05a398c394860472acd8f2002"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/middlewares/validarConsentimento.js": {
+    "mtime": 1791475944.139328,
+    "seen": 1791478250.659559,
+    "ast_hash": "b5b08e389b2c4c69107136e7e27584e7",
+    "semantic_hash": "b5b08e389b2c4c69107136e7e27584e7"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/middlewares/verificarNumeroContaExiste.js": {
+    "mtime": 1791475944.139328,
+    "seen": 1791478250.6595595,
+    "ast_hash": "a751c8f5a978621bf0183b44bd661696",
+    "semantic_hash": "a751c8f5a978621bf0183b44bd661696"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/migrations/20250531012157-enable-uuid-ossp.js": {
+    "mtime": 1791475944.1403286,
+    "seen": 1791478250.6595602,
+    "ast_hash": "e3e1f1378427cecc25b81a294403cf02",
+    "semantic_hash": "e3e1f1378427cecc25b81a294403cf02"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/migrations/20250531031358-create-conta.js": {
+    "mtime": 1791475944.1403286,
+    "seen": 1791478250.6595607,
+    "ast_hash": "337d2cde9545657f0b43cfcf54c001ed",
+    "semantic_hash": "337d2cde9545657f0b43cfcf54c001ed"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/migrations/20250531043913-create-transacao.js": {
+    "mtime": 1791475944.1403286,
+    "seen": 1791478250.6595614,
+    "ast_hash": "f0ff09672ad95b785dc0a9d8c0f37109",
+    "semantic_hash": "f0ff09672ad95b785dc0a9d8c0f37109"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/migrations/20250531050307-create-oferta.js": {
+    "mtime": 1791475944.1413271,
+    "seen": 1791478250.6595619,
+    "ast_hash": "2dd6c1f9d296261ab3fcd69c342b925c",
+    "semantic_hash": "2dd6c1f9d296261ab3fcd69c342b925c"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/migrations/20250604042031-create-consentimento.js": {
+    "mtime": 1791475944.1413271,
+    "seen": 1791478250.6595626,
+    "ast_hash": "1cb1b59a14b5a4abb607e14806cc1d65",
+    "semantic_hash": "1cb1b59a14b5a4abb607e14806cc1d65"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/models/Consentimento.js": {
+    "mtime": 1791475944.1413271,
+    "seen": 1791478250.659563,
+    "ast_hash": "8736ba8ef2ec4768f6f3b566f0b81d8f",
+    "semantic_hash": "8736ba8ef2ec4768f6f3b566f0b81d8f"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/models/Conta.js": {
+    "mtime": 1791475944.142328,
+    "seen": 1791478250.6595635,
+    "ast_hash": "9038db79979892815ee0aef8fb16ff67",
+    "semantic_hash": "9038db79979892815ee0aef8fb16ff67"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/models/Oferta.js": {
+    "mtime": 1791475944.142328,
+    "seen": 1791478250.6595643,
+    "ast_hash": "670b3a4270184e1b98b7c45478b830ea",
+    "semantic_hash": "670b3a4270184e1b98b7c45478b830ea"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/models/Transacao.js": {
+    "mtime": 1791475944.142328,
+    "seen": 1791478250.6595647,
+    "ast_hash": "017124a21d9e5acbae55c81448bfcdcd",
+    "semantic_hash": "017124a21d9e5acbae55c81448bfcdcd"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/models/index.js": {
+    "mtime": 1791475944.1433277,
+    "seen": 1791478250.6595652,
+    "ast_hash": "b1cb64901fd625040a3eafa4ce4b2e7a",
+    "semantic_hash": "b1cb64901fd625040a3eafa4ce4b2e7a"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/routes/authRoutes.js": {
+    "mtime": 1791475944.1433277,
+    "seen": 1791478250.659566,
+    "ast_hash": "51ea39eb747e949394c837c7320d5686",
+    "semantic_hash": "51ea39eb747e949394c837c7320d5686"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/routes/consentimentoRoutes.js": {
+    "mtime": 1791475944.1433277,
+    "seen": 1791478250.6595664,
+    "ast_hash": "ae89a3c96f34919827e9f2d9d5a06af5",
+    "semantic_hash": "ae89a3c96f34919827e9f2d9d5a06af5"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/routes/contaRoutes.js": {
+    "mtime": 1791475944.1444578,
+    "seen": 1791478250.6595669,
+    "ast_hash": "d42f1618b58097320a6c90e062bc7c96",
+    "semantic_hash": "d42f1618b58097320a6c90e062bc7c96"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/routes/ofertaRoutes.js": {
+    "mtime": 1791475944.1444578,
+    "seen": 1791478250.6595674,
+    "ast_hash": "47fde5f2ae5da264a2e7b96840cff158",
+    "semantic_hash": "47fde5f2ae5da264a2e7b96840cff158"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/routes/openFinanceRoutes.js": {
+    "mtime": 1791475944.1444578,
+    "seen": 1791478250.659568,
+    "ast_hash": "9007fe05efc27961f704e3c953051372",
+    "semantic_hash": "9007fe05efc27961f704e3c953051372"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/routes/transacaoRoutes.js": {
+    "mtime": 1791475944.1454613,
+    "seen": 1791478250.6595685,
+    "ast_hash": "b6f984b4fd1563d28834b11f36941dfb",
+    "semantic_hash": "b6f984b4fd1563d28834b11f36941dfb"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/seeders/20250604035525-seed-contas.js": {
+    "mtime": 1791475944.1454613,
+    "seen": 1791478250.6595693,
+    "ast_hash": "e0016cf1c706c9b7462c4c561723abe9",
+    "semantic_hash": "e0016cf1c706c9b7462c4c561723abe9"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/seeders/20250604035702-seed-ofertas.js": {
+    "mtime": 1791475944.1454613,
+    "seen": 1791478250.6595697,
+    "ast_hash": "5fae24c4b03b689704c5684cacca5e6f",
+    "semantic_hash": "5fae24c4b03b689704c5684cacca5e6f"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/seeders/20250604040042-seed-transacoes.js": {
+    "mtime": 1791475944.1464615,
+    "seen": 1791478250.6595702,
+    "ast_hash": "3af4fc1834ead8313722ae639fabfc52",
+    "semantic_hash": "3af4fc1834ead8313722ae639fabfc52"
+  },
+  "Sicredi/SicrediBackEnd/app.js": {
+    "mtime": 1791475944.1484613,
+    "seen": 1791478250.6595707,
+    "ast_hash": "39d93f80e4870dbd1e9df6b664fe5e26",
+    "semantic_hash": "39d93f80e4870dbd1e9df6b664fe5e26"
+  },
+  "Sicredi/SicrediBackEnd/package.json": {
+    "mtime": 1791475944.1484613,
+    "seen": 1791478250.6595714,
+    "ast_hash": "c1b32078a3930ee140f2fedd9a3475be",
+    "semantic_hash": "c1b32078a3930ee140f2fedd9a3475be"
+  },
+  "Sicredi/SicrediBackEnd/src/config/config.js": {
+    "mtime": 1791475944.149964,
+    "seen": 1791478250.659572,
+    "ast_hash": "9fe12d77956e598cf2b9669240300651",
+    "semantic_hash": "9fe12d77956e598cf2b9669240300651"
+  },
+  "Sicredi/SicrediBackEnd/src/controllers/authController.js": {
+    "mtime": 1791475944.149964,
+    "seen": 1791478250.6595724,
+    "ast_hash": "b64296720f0e07bfe49d0f1a8909aeba",
+    "semantic_hash": "b64296720f0e07bfe49d0f1a8909aeba"
+  },
+  "Sicredi/SicrediBackEnd/src/controllers/consentimentoController.js": {
+    "mtime": 1791475944.149964,
+    "seen": 1791478250.659573,
+    "ast_hash": "17e2a3cd20d1d873ef910782a4723961",
+    "semantic_hash": "17e2a3cd20d1d873ef910782a4723961"
+  },
+  "Sicredi/SicrediBackEnd/src/controllers/contaController.js": {
+    "mtime": 1791475944.149964,
+    "seen": 1791478250.6595736,
+    "ast_hash": "329ee37c6e201a1e2d3d581735a786f1",
+    "semantic_hash": "329ee37c6e201a1e2d3d581735a786f1"
+  },
+  "Sicredi/SicrediBackEnd/src/controllers/ofertaController.js": {
+    "mtime": 1791475944.1515706,
+    "seen": 1791478250.659574,
+    "ast_hash": "4fd444cafb025584ae640c57da02086a",
+    "semantic_hash": "4fd444cafb025584ae640c57da02086a"
+  },
+  "Sicredi/SicrediBackEnd/src/controllers/openFinanceController.js": {
+    "mtime": 1791475944.1515706,
+    "seen": 1791478250.6595745,
+    "ast_hash": "8e96ffb1f429922fd947ad4d00a43622",
+    "semantic_hash": "8e96ffb1f429922fd947ad4d00a43622"
+  },
+  "Sicredi/SicrediBackEnd/src/controllers/transacaoController.js": {
+    "mtime": 1791475944.1515706,
+    "seen": 1791478250.6595752,
+    "ast_hash": "619a2d7a06d87bf0056769f6c21ed655",
+    "semantic_hash": "619a2d7a06d87bf0056769f6c21ed655"
+  },
+  "Sicredi/SicrediBackEnd/src/middlewares/authMiddleware.js": {
+    "mtime": 1791475944.1515706,
+    "seen": 1791478250.6595757,
+    "ast_hash": "d320843def906a762da9ee065ca0c3e5",
+    "semantic_hash": "d320843def906a762da9ee065ca0c3e5"
+  },
+  "Sicredi/SicrediBackEnd/src/middlewares/validarCamposObrigatorios.js": {
+    "mtime": 1791475944.1515706,
+    "seen": 1791478250.6595764,
+    "ast_hash": "bffc20b05a398c394860472acd8f2002",
+    "semantic_hash": "bffc20b05a398c394860472acd8f2002"
+  },
+  "Sicredi/SicrediBackEnd/src/middlewares/validarConsentimento.js": {
+    "mtime": 1791475944.1530807,
+    "seen": 1791478250.659577,
+    "ast_hash": "b5b08e389b2c4c69107136e7e27584e7",
+    "semantic_hash": "b5b08e389b2c4c69107136e7e27584e7"
+  },
+  "Sicredi/SicrediBackEnd/src/middlewares/verificarNumeroContaExiste.js": {
+    "mtime": 1791475944.1530807,
+    "seen": 1791478250.6595776,
+    "ast_hash": "a751c8f5a978621bf0183b44bd661696",
+    "semantic_hash": "a751c8f5a978621bf0183b44bd661696"
+  },
+  "Sicredi/SicrediBackEnd/src/migrations/20250531012157-enable-uuid-ossp.js": {
+    "mtime": 1791475944.1540935,
+    "seen": 1791478250.659578,
+    "ast_hash": "e3e1f1378427cecc25b81a294403cf02",
+    "semantic_hash": "e3e1f1378427cecc25b81a294403cf02"
+  },
+  "Sicredi/SicrediBackEnd/src/migrations/20250531031358-create-conta.js": {
+    "mtime": 1791475944.1540935,
+    "seen": 1791478250.6595786,
+    "ast_hash": "337d2cde9545657f0b43cfcf54c001ed",
+    "semantic_hash": "337d2cde9545657f0b43cfcf54c001ed"
+  },
+  "Sicredi/SicrediBackEnd/src/migrations/20250531043913-create-transacao.js": {
+    "mtime": 1791475944.1540935,
+    "seen": 1791478250.659579,
+    "ast_hash": "f0ff09672ad95b785dc0a9d8c0f37109",
+    "semantic_hash": "f0ff09672ad95b785dc0a9d8c0f37109"
+  },
+  "Sicredi/SicrediBackEnd/src/migrations/20250531050307-create-oferta.js": {
+    "mtime": 1791475944.155085,
+    "seen": 1791478250.6595798,
+    "ast_hash": "2dd6c1f9d296261ab3fcd69c342b925c",
+    "semantic_hash": "2dd6c1f9d296261ab3fcd69c342b925c"
+  },
+  "Sicredi/SicrediBackEnd/src/migrations/20250604042031-create-consentimento.js": {
+    "mtime": 1791475944.155085,
+    "seen": 1791478250.6595802,
+    "ast_hash": "1cb1b59a14b5a4abb607e14806cc1d65",
+    "semantic_hash": "1cb1b59a14b5a4abb607e14806cc1d65"
+  },
+  "Sicredi/SicrediBackEnd/src/models/Consentimento.js": {
+    "mtime": 1791475944.155085,
+    "seen": 1791478250.6595807,
+    "ast_hash": "8736ba8ef2ec4768f6f3b566f0b81d8f",
+    "semantic_hash": "8736ba8ef2ec4768f6f3b566f0b81d8f"
+  },
+  "Sicredi/SicrediBackEnd/src/models/Conta.js": {
+    "mtime": 1791475944.1560848,
+    "seen": 1791478250.6595812,
+    "ast_hash": "9038db79979892815ee0aef8fb16ff67",
+    "semantic_hash": "9038db79979892815ee0aef8fb16ff67"
+  },
+  "Sicredi/SicrediBackEnd/src/models/Oferta.js": {
+    "mtime": 1791475944.1560848,
+    "seen": 1791478250.6595817,
+    "ast_hash": "670b3a4270184e1b98b7c45478b830ea",
+    "semantic_hash": "670b3a4270184e1b98b7c45478b830ea"
+  },
+  "Sicredi/SicrediBackEnd/src/models/Transacao.js": {
+    "mtime": 1791475944.1560848,
+    "seen": 1791478250.6595821,
+    "ast_hash": "065f06120a0d7997da3f662dbe5cf45d",
+    "semantic_hash": "065f06120a0d7997da3f662dbe5cf45d"
+  },
+  "Sicredi/SicrediBackEnd/src/models/index.js": {
+    "mtime": 1791475944.1560848,
+    "seen": 1791478250.659583,
+    "ast_hash": "b1cb64901fd625040a3eafa4ce4b2e7a",
+    "semantic_hash": "b1cb64901fd625040a3eafa4ce4b2e7a"
+  },
+  "Sicredi/SicrediBackEnd/src/routes/authRoutes.js": {
+    "mtime": 1791475944.1570847,
+    "seen": 1791478250.6595836,
+    "ast_hash": "51ea39eb747e949394c837c7320d5686",
+    "semantic_hash": "51ea39eb747e949394c837c7320d5686"
+  },
+  "Sicredi/SicrediBackEnd/src/routes/consentimentoRoutes.js": {
+    "mtime": 1791475944.1570847,
+    "seen": 1791478250.659584,
+    "ast_hash": "ae89a3c96f34919827e9f2d9d5a06af5",
+    "semantic_hash": "ae89a3c96f34919827e9f2d9d5a06af5"
+  },
+  "Sicredi/SicrediBackEnd/src/routes/contaRoutes.js": {
+    "mtime": 1791475944.1570847,
+    "seen": 1791478250.6595845,
+    "ast_hash": "d42f1618b58097320a6c90e062bc7c96",
+    "semantic_hash": "d42f1618b58097320a6c90e062bc7c96"
+  },
+  "Sicredi/SicrediBackEnd/src/routes/ofertaRoutes.js": {
+    "mtime": 1791475944.1580844,
+    "seen": 1791478250.6595852,
+    "ast_hash": "47fde5f2ae5da264a2e7b96840cff158",
+    "semantic_hash": "47fde5f2ae5da264a2e7b96840cff158"
+  },
+  "Sicredi/SicrediBackEnd/src/routes/openFinanceRoutes.js": {
+    "mtime": 1791475944.1580844,
+    "seen": 1791478250.6595857,
+    "ast_hash": "9007fe05efc27961f704e3c953051372",
+    "semantic_hash": "9007fe05efc27961f704e3c953051372"
+  },
+  "Sicredi/SicrediBackEnd/src/routes/transacaoRoutes.js": {
+    "mtime": 1791475944.1580844,
+    "seen": 1791478250.6595862,
+    "ast_hash": "b6f984b4fd1563d28834b11f36941dfb",
+    "semantic_hash": "b6f984b4fd1563d28834b11f36941dfb"
+  },
+  "Sicredi/SicrediBackEnd/src/seeders/20250604035525-seed-contas.js": {
+    "mtime": 1791475944.1590843,
+    "seen": 1791478250.659587,
+    "ast_hash": "e84222b46775ccc73834f2c5ce291da9",
+    "semantic_hash": "e84222b46775ccc73834f2c5ce291da9"
+  },
+  "Sicredi/SicrediBackEnd/src/seeders/20250604035702-seed-ofertas.js": {
+    "mtime": 1791475944.1590843,
+    "seen": 1791478250.6595876,
+    "ast_hash": "b34aeac77577e3f5033f08ddf2b35121",
+    "semantic_hash": "b34aeac77577e3f5033f08ddf2b35121"
+  },
+  "Sicredi/SicrediBackEnd/src/seeders/20250604040042-seed-transacoes.js": {
+    "mtime": 1791475944.1590843,
+    "seen": 1791478250.659588,
+    "ast_hash": "be3f140578dc0d58f600723235a7faff",
+    "semantic_hash": "be3f140578dc0d58f600723235a7faff"
+  },
+  "package.json": {
+    "mtime": 1791475944.161085,
+    "seen": 1791478250.6595886,
+    "ast_hash": "4bc9c920ed045ac768952339158d14da",
+    "semantic_hash": "4bc9c920ed045ac768952339158d14da"
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1791477634.6391888,
+    "seen": 1791478250.659589,
+    "ast_hash": "9b31786b637be3c13978bec4c2330752",
+    "semantic_hash": "9b31786b637be3c13978bec4c2330752"
+  },
+  "Banrisul/BanrisulBackEnd/README.md": {
+    "mtime": 1791475944.0378811,
+    "seen": 1791478250.6595895,
+    "ast_hash": "b81ab5a1bfdf9a91f913fbd03c628385",
+    "semantic_hash": "b81ab5a1bfdf9a91f913fbd03c628385"
+  },
+  "Banrisul/BanrisulBackEnd/copilot-commit-message-instructions.md": {
+    "mtime": 1791475944.0388808,
+    "seen": 1791478250.6595905,
+    "ast_hash": "82c3852ffc89ce0bcbf6a817b031a7c8",
+    "semantic_hash": "82c3852ffc89ce0bcbf6a817b031a7c8"
+  },
+  "Banrisul/BanrisulBackEnd/src/config/comandos.txt": {
+    "mtime": 1791475944.0398808,
+    "seen": 1791478250.659591,
+    "ast_hash": "11208dc49ba014d3b54d550a9c92ee81",
+    "semantic_hash": "11208dc49ba014d3b54d550a9c92ee81"
+  },
+  "Banrisul/BanrisulFrontEnd/README.md": {
+    "mtime": 1791475944.0493937,
+    "seen": 1791478250.6595914,
+    "ast_hash": "4a87d718ce615c9dbf86909e8973296c",
+    "semantic_hash": "4a87d718ce615c9dbf86909e8973296c"
+  },
+  "Banrisul/BanrisulFrontEnd/index.html": {
+    "mtime": 1791475944.0513923,
+    "seen": 1791478250.659592,
+    "ast_hash": "5f59a7bd04ecd94d4df1e0e47ac41f5a",
+    "semantic_hash": "5f59a7bd04ecd94d4df1e0e47ac41f5a"
+  },
+  "Banrisul/BanrisulFrontEnd/public/robots.txt": {
+    "mtime": 1791475944.0579057,
+    "seen": 1791478250.6595924,
+    "ast_hash": "a9b03494151fe90e5decd2405400e106",
+    "semantic_hash": "a9b03494151fe90e5decd2405400e106"
+  },
+  "CLAUDE.md": {
+    "mtime": 1791477210.0558202,
+    "seen": 1791478250.6595929,
+    "ast_hash": "8a6643a420fdad6bfb583523bc6cef16",
+    "semantic_hash": "8a6643a420fdad6bfb583523bc6cef16"
+  },
+  "Credito360/Credito360BackEnd/README.md": {
+    "mtime": 1791475944.0809183,
+    "seen": 1791478250.6595938,
+    "ast_hash": "009138023dcf4e73bfca6245f94978e0",
+    "semantic_hash": "009138023dcf4e73bfca6245f94978e0"
+  },
+  "Credito360/Credito360BackEnd/copilot-commit-message-instructions.md": {
+    "mtime": 1791475944.0819185,
+    "seen": 1791478250.6595943,
+    "ast_hash": "82c3852ffc89ce0bcbf6a817b031a7c8",
+    "semantic_hash": "82c3852ffc89ce0bcbf6a817b031a7c8"
+  },
+  "Credito360/Credito360BackEnd/src/config/comandos.txt": {
+    "mtime": 1791475944.0839572,
+    "seen": 1791478250.6595948,
+    "ast_hash": "1bad7a54146fdbdc38b6c5aa2d18b547",
+    "semantic_hash": "1bad7a54146fdbdc38b6c5aa2d18b547"
+  },
+  "Credito360/Credito360FrontEnd/README.md": {
+    "mtime": 1791475944.0905244,
+    "seen": 1791478250.6595955,
+    "ast_hash": "27eee941875c3d67f93e1f420d36842c",
+    "semantic_hash": "27eee941875c3d67f93e1f420d36842c"
+  },
+  "Credito360/Credito360FrontEnd/index.html": {
+    "mtime": 1791475944.0930276,
+    "seen": 1791478250.659596,
+    "ast_hash": "f24f6a1b4b3565e978930794455fbb80",
+    "semantic_hash": "f24f6a1b4b3565e978930794455fbb80"
+  },
+  "Credito360/Credito360FrontEnd/public/robots.txt": {
+    "mtime": 1791475944.098031,
+    "seen": 1791478250.6595964,
+    "ast_hash": "a9b03494151fe90e5decd2405400e106",
+    "semantic_hash": "a9b03494151fe90e5decd2405400e106"
+  },
+  "Itau/ItauBackEnd/README.md": {
+    "mtime": 1791475944.121451,
+    "seen": 1791478250.6595972,
+    "ast_hash": "9695d8cead2f7537f546d139206edb58",
+    "semantic_hash": "9695d8cead2f7537f546d139206edb58"
+  },
+  "Itau/ItauBackEnd/copilot-commit-message-instructions.md": {
+    "mtime": 1791475944.121451,
+    "seen": 1791478250.6595986,
+    "ast_hash": "82c3852ffc89ce0bcbf6a817b031a7c8",
+    "semantic_hash": "82c3852ffc89ce0bcbf6a817b031a7c8"
+  },
+  "Itau/ItauBackEnd/src/config/comandos.txt": {
+    "mtime": 1791475944.1239588,
+    "seen": 1791478250.659599,
+    "ast_hash": "11208dc49ba014d3b54d550a9c92ee81",
+    "semantic_hash": "11208dc49ba014d3b54d550a9c92ee81"
+  },
+  "MercadoPago/MercadoPagoBackEnd/README.md": {
+    "mtime": 1791475944.1340888,
+    "seen": 1791478250.6595998,
+    "ast_hash": "386db40b4f7bc95de46919ccaa83fab0",
+    "semantic_hash": "386db40b4f7bc95de46919ccaa83fab0"
+  },
+  "MercadoPago/MercadoPagoBackEnd/copilot-commit-message-instructions.md": {
+    "mtime": 1791475944.1350887,
+    "seen": 1791478250.6596005,
+    "ast_hash": "82c3852ffc89ce0bcbf6a817b031a7c8",
+    "semantic_hash": "82c3852ffc89ce0bcbf6a817b031a7c8"
+  },
+  "MercadoPago/MercadoPagoBackEnd/src/config/comandos.txt": {
+    "mtime": 1791475944.1360886,
+    "seen": 1791478250.659601,
+    "ast_hash": "11208dc49ba014d3b54d550a9c92ee81",
+    "semantic_hash": "11208dc49ba014d3b54d550a9c92ee81"
+  },
+  "README.md": {
+    "mtime": 1791475944.1464615,
+    "seen": 1791478250.6596017,
+    "ast_hash": "ab8b72494d649cc32c1d2ee296f97f69",
+    "semantic_hash": "ab8b72494d649cc32c1d2ee296f97f69"
+  },
+  "Sicredi/SicrediBackEnd/README.md": {
+    "mtime": 1791475944.1474617,
+    "seen": 1791478250.6596022,
+    "ast_hash": "06b02f48520bfad21cdcfd8f8f27a255",
+    "semantic_hash": "06b02f48520bfad21cdcfd8f8f27a255"
+  },
+  "Sicredi/SicrediBackEnd/copilot-commit-message-instructions.md": {
+    "mtime": 1791475944.1484613,
+    "seen": 1791478250.6596026,
+    "ast_hash": "82c3852ffc89ce0bcbf6a817b031a7c8",
+    "semantic_hash": "82c3852ffc89ce0bcbf6a817b031a7c8"
+  },
+  "Sicredi/SicrediBackEnd/src/config/comandos.txt": {
+    "mtime": 1791475944.149964,
+    "seen": 1791478250.659603,
+    "ast_hash": "11208dc49ba014d3b54d550a9c92ee81",
+    "semantic_hash": "11208dc49ba014d3b54d550a9c92ee81"
+  },
+  "comandos.txt": {
+    "mtime": 1791475944.1590843,
+    "seen": 1791478250.6596036,
+    "ast_hash": "0dab8882627bb62b0b71507e0913135a",
+    "semantic_hash": "0dab8882627bb62b0b71507e0913135a"
+  },
+  "docker-compose.yml": {
+    "mtime": 1791475944.1600885,
+    "seen": 1791478250.6596043,
+    "ast_hash": "632e71c470be78dfedd4efe163aec1b1",
+    "semantic_hash": "632e71c470be78dfedd4efe163aec1b1"
+  },
+  "Banrisul/BanrisulFrontEnd/public/placeholder.svg": {
+    "mtime": 1791475944.0569043,
+    "seen": 1791478250.659605,
+    "ast_hash": "35707bd9960ba5281c72af927b79291f",
+    "semantic_hash": "35707bd9960ba5281c72af927b79291f"
+  },
+  "Credito360/Credito360FrontEnd/public/placeholder.svg": {
+    "mtime": 1791475944.098031,
+    "seen": 1791478250.6596055,
+    "ast_hash": "35707bd9960ba5281c72af927b79291f",
+    "semantic_hash": "35707bd9960ba5281c72af927b79291f"
+  }
+}
